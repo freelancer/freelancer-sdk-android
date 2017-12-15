@@ -1,0 +1,12 @@
+ext {
+    oAuthServer=""
+    oAuthSandboxServer=""
+
+    apiServer="https://www.freelancer.com/api"
+    sandboxServer="https://www.freelancer-sandbox.com/api"
+    apiPrefixProjects = "/projects/0.1/"
+    apiPrefixUsers = "/users/0.1/"
+    apiPrefixMessages = "/messages/0.1/"
+    apiPrefixContests = "/contests/0.1/"
+    apiPrefixCommon = "/common/0.1/"
+}

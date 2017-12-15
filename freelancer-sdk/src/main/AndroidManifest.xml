@@ -1,0 +1,9 @@
+<manifest package="com.freelancer.android.flapi"
+          xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <application>
+        <activity android:name="com.freelancer.android.sdk.oauth.OAuthActivity"/>
+    </application>
+</manifest>

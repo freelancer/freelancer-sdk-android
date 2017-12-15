@@ -1,0 +1,56 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+
+def globalConf = rootProject.ext
+
+android {
+    compileSdkVersion 26
+
+    defaultConfig {
+        minSdkVersion 19
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+        buildConfigField "String", "BASE_URL_API", "\"${rootProject.ext.apiServer}\""
+        buildConfigField "String", "BASE_URL_SANDBOX_API", "\"${rootProject.ext.sandboxServer}\""
+        buildConfigField "String", "API_PREFIX_USERS", "\"${rootProject.ext.apiPrefixUsers}\""
+        buildConfigField "String", "API_PREFIX_PROJECTS", "\"${rootProject.ext.apiPrefixProjects}\""
+        buildConfigField "String", "API_PREFIX_MESSAGES", "\"${rootProject.ext.apiPrefixMessages}\""
+        buildConfigField "String", "API_PREFIX_CONTESTS", "\"${rootProject.ext.apiPrefixContests}\""
+        buildConfigField "String", "API_PREFIX_COMMON", "\"${rootProject.ext.apiPrefixCommon}\""
+        buildConfigField "String", "BASE_OAUTH_URL", "\"https://accounts.freelancer.com/\""
+        buildConfigField "String", "BASE_OAUTH_URL_SANDBOX", "\"https://accounts.freelancer-sandbox.com/\""
+    }
+    buildTypes {
+        debug {}
+        release {}
+    }
+    sourceSets {
+        main.java.srcDirs += 'src/main/kotlin'
+    }
+}
+
+dependencies {
+    Map<String, String> dependencies = globalConf.commonDependencies
+
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation dependencies.kotlin
+    implementation 'com.android.support:appcompat-v7:26.1.0'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.1'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
+
+    implementation dependencies.rxAndroid
+    implementation dependencies.rxJava
+    implementation dependencies.rxKotlin
+
+    implementation dependencies.retrofit
+    implementation dependencies.retrofitAdapterRxJava
+    implementation dependencies.retrofitConverterGson
+
+    implementation dependencies.okhttpLogging
+}
