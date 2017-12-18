@@ -18,15 +18,24 @@ The Freelancer sdk aims to make using the the Freelancer.com API as easy as poss
 
 Add twitter dependency to your build.gradle:
 ```groovy
-
-repositories {
-  jcenter()
+//In the root build.gradle file
+allprojects {
+    repositories {
+        google()
+        jcenter()
+        
+        //Add this block
+        maven {
+            url "https://freelancer.bintray.com/freelancer-sdk-android/"
+        }
+    }
 }
 
+//In the project gradle
 dependencies {
-  compile('TODO once first artifact is deployed') {
-    transitive = true
-  }
+    compile('com.freelancer:freelancer-sdk:0.1.0@aar') {
+        transitive = true
+    }
 }
 
 ```
