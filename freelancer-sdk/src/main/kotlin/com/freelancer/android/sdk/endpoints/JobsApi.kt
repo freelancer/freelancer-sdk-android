@@ -9,12 +9,29 @@ import rx.Observable
 
 interface JobsApi {
     @GET("jobs")
-    fun getJobs(@Query("jobs[]") jobsList: List<Long>,
-            @Query("categories[]") categoryIds: List<Long>? = null): Observable<List<Job>>
+    fun getJobs(
+            @Query("jobs[]") jobsList: List<Long>? = null,
+            @Query("job_names[]") jobNames: List<String>? = null,
+            @Query("seo_urls[]") seoUrls: List<String>? = null,
+            @Query("categories[]") categoryIds: List<Long>? = null,
+            @Query("only_local") onlyLocal: Boolean? = null,
+            @Query("active_project_count_details") activeProjectCountDetails: Boolean? = null,
+            @Query("seo_details") seoDetails: Boolean? = null,
+            @Query("seo_country_name") seoCountryName: String? = null,
+            @Query("lang") lang: String? = null
+    ): Observable<List<Job>>
 
     @GET("job_bundles")
-    fun getJobBundles(): Observable<JobBundleResponse>
+    fun getJobBundles(
+            @Query("job_bundles[]") jobBundles: List<Long>? = null,
+            @Query("categories[]") categories: List<Long>? = null,
+            @Query("lang") lang: String? = null
+    ): Observable<JobBundleResponse>
 
     @GET("job_bundle_categories")
-    fun getJobBundleCategories(): Observable<JobBundleCategoryResponse>
+    fun getJobBundleCategories(
+            @Query("categories[]") categories: List<Long>? = null,
+            @Query("job_bundle_details") jobBundleDetails: Boolean? = null,
+            @Query("lang") lang: String? = null
+    ): Observable<JobBundleCategoryResponse>
 }
