@@ -79,6 +79,10 @@ data class Review(
 
     enum class ReviewProjectStatus {
         COMPLETE,
-        INCOMPLETE
+        INCOMPLETE;
+
+        override fun toString(): String {
+            return name.toLowerCase()
+        }
     }
 }
