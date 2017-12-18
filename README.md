@@ -24,7 +24,7 @@ repositories {
 }
 
 dependencies {
-  compile('TODO once the namespace jas been claimed') {
+  compile('TODO once first artifact is deployed') {
     transitive = true
   }
 }
