@@ -72,8 +72,7 @@ data class Milestone(
     }
 
     enum class MilestoneAction {
-        ACCEPT,
-        REJECT,
+        UPDATE,
         RELEASE,
         REQUEST_RELEASE,
         CANCEL;
