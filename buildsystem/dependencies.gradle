@@ -6,6 +6,7 @@ ext {
             gson                 : "com.google.code.gson:gson:2.8.0",
             kotlin               : "org.jetbrains.kotlin:kotlin-stdlib:$kotlinVersion",
             okhttpLogging        : "com.squareup.okhttp3:logging-interceptor:$okhttpVersion",
+            okhttpMock           : "com.squareup.okhttp3:mockwebserver:$okhttpVersion",
             retrofit             : "com.squareup.retrofit2:retrofit:$retrofitVersion",
             retrofitAdapterRxJava: "com.squareup.retrofit2:adapter-rxjava:$retrofitVersion",
             retrofitConverterGson: "com.squareup.retrofit2:converter-gson:$retrofitVersion",
