@@ -8,18 +8,12 @@ import com.google.gson.annotations.SerializedName
 data class JobCategory(
 
         @SerializedName("id")
-        var serverId: Long = 0,
+        val serverId: Long = 0,
 
         @SerializedName("name")
-        override var name: String? = null,
-
-        var jobCount: Int = 0
+        override var name: String? = null
 
 ) : JobContext, ITranslation {
-
-    fun appendJobCount(count: Int) {
-        jobCount += count
-    }
 
     override fun translate(translations: TranslationList) {
         name = translations.translate(name)
