@@ -8,9 +8,21 @@ import rx.Observable
 interface MessagesApi {
 
     @GET("messages/")
-    fun getMessages(@Query("threads[]") threadId: Long,
-            @Query("limit") limit: Int,
-            @Query("offset") offset: Int): Observable<ThreadsResponse>
+    fun getMessages(
+            @Query("threads[]") threads: List<Long>,
+            @Query("senders[]") senders: List<Long>,
+            @Query("messages") messages: List<Long>,
+            @Query("contexts[]") contexts: List<Long>,
+            @Query("context_type") contextType: String,
+            @Query("is_read") is_read: Boolean,
+            @Query("offset") offset: Long,
+            @Query("limit") limit: Long,
+            @Query("from_updated_time") fromUpdatedTime: Long,
+            @Query("to_updated_time") toUpdatedTime: Long,
+            @Query("count") count: Boolean,
+            @Query("user_details") userDetails: Boolean,
+            @Query("thread_details") threadDetails: Boolean
+    ): Observable<ThreadsResponse>
 
     /**
      * TODO
