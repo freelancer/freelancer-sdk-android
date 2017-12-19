@@ -44,7 +44,7 @@ internal class LongTypeAdapter : TypeAdapter<Long?>() {
 internal class LowercaseEnumTypeAdapterFactory : TypeAdapterFactory {
     override fun <T> create(gson: Gson, type: TypeToken<T>): TypeAdapter<T>? {
         val rawType = type.rawType as? Class<T>
-        if (rawType?.isEnum != false) {
+        if (rawType?.isEnum != true) {
             return null
         }
 

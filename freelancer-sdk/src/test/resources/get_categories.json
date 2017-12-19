@@ -1,0 +1,113 @@
+{
+  "status": "success",
+  "result": {
+    "jobs": null,
+    "categories": [
+      {
+        "id": 1,
+        "name": "Websites, IT & Software"
+      },
+      {
+        "id": 2,
+        "name": "Writing & Content"
+      },
+      {
+        "id": 3,
+        "name": "Design, Media & Architecture"
+      },
+      {
+        "id": 4,
+        "name": "Data Entry & Admin"
+      },
+      {
+        "id": 5,
+        "name": "Engineering & Science"
+      },
+      {
+        "id": 6,
+        "name": "Sales & Marketing"
+      },
+      {
+        "id": 7,
+        "name": "Business, Accounting, Human Resources & Legal"
+      },
+      {
+        "id": 8,
+        "name": "Product Sourcing & Manufacturing"
+      },
+      {
+        "id": 9,
+        "name": "Mobile Phones & Computing"
+      },
+      {
+        "id": 10,
+        "name": "Translation & Languages"
+      },
+      {
+        "id": 11,
+        "name": "Local Jobs & Trades"
+      },
+      {
+        "id": 12,
+        "name": "Local Jobs & Services"
+      },
+      {
+        "id": 99,
+        "name": "Other"
+      },
+      {
+        "id": 100,
+        "name": "Assemble furniture"
+      },
+      {
+        "id": 102,
+        "name": "Cleaning and housework"
+      },
+      {
+        "id": 103,
+        "name": "Design"
+      },
+      {
+        "id": 104,
+        "name": "Electrician"
+      },
+      {
+        "id": 105,
+        "name": "Fixing Computers and electronics"
+      },
+      {
+        "id": 106,
+        "name": "Gardening nad yard work"
+      },
+      {
+        "id": 107,
+        "name": "Handyman"
+      },
+      {
+        "id": 108,
+        "name": "Install/Mount Tv"
+      },
+      {
+        "id": 109,
+        "name": "Moving"
+      },
+      {
+        "id": 110,
+        "name": "Photograpy"
+      },
+      {
+        "id": 111,
+        "name": "Pickup and Deliver"
+      },
+      {
+        "id": 112,
+        "name": "Plumbing"
+      },
+      {
+        "id": 113,
+        "name": "Professional Services"
+      }
+    ]
+  },
+  "request_id": "863e2e8cf6a771743b013464c8addf73"
+}

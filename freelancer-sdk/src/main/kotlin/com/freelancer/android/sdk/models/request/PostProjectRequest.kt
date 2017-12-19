@@ -53,8 +53,7 @@ data class PostProjectJobRequest(
 
 data class PostProjectJobCategoryRequest(
         var id: Int = 0,
-        var name: String? = null,
-        var jobCount: Int = 0
+        var name: String? = null
 )
 
 data class PostProjectLocationRequest(
@@ -135,8 +134,7 @@ fun List<Job>.getAsPostRequest(): List<PostProjectJobRequest> {
 fun JobCategory.getAsPostRequest(): PostProjectJobCategoryRequest {
     return PostProjectJobCategoryRequest(
             id = serverId.toInt(),
-            name = name,
-            jobCount = jobCount
+            name = name
     )
 }
 
