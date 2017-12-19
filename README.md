@@ -52,7 +52,7 @@ The master branch of this repository is used for developing, releases will be cu
 ## Contact
 
 For usage questions please check through the issues and check the [sample app](https://github.com/freelancer/freelancer-sdk-android/blob/master/sample/src/main/java/com/freelancer/android/flsdkandroid/SampleActivity.kt).
-If you are still having please post an issue [here](https://github.com/freelancer/freelancer-sdk-android/issues).
+If you are still having problems please post an issue [here](https://github.com/freelancer/freelancer-sdk-android/issues).
 
 Please report any bugs as [issues](https://github.com/freelancer/freelancer-sdk-android/issues).
 
