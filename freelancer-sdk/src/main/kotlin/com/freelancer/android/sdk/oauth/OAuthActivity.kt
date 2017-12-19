@@ -2,9 +2,11 @@ package com.freelancer.android.sdk.oauth
 
 import android.app.Activity
 import android.content.Intent
+import android.graphics.drawable.ColorDrawable
 import android.net.Uri
 import android.os.Build
 import android.os.Bundle
+import android.support.v4.content.ContextCompat
 import android.support.v7.app.AppCompatActivity
 import android.view.KeyEvent
 import android.view.View
@@ -79,7 +81,10 @@ class OAuthActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_oauth)
 
-        supportActionBar?.hide()
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        supportActionBar?.setHomeAsUpIndicator(R.drawable.ic_close)
+        supportActionBar?.title = getString(R.string.freelancer)
+        supportActionBar?.setBackgroundDrawable(ColorDrawable(ContextCompat.getColor(this, R.color.freelancer_blue)))
 
         requestCode = intent.getIntExtra(KEY_REQUEST_CODE, 0)
         clientId = intent.getStringExtra(KEY_CLIENT_ID)
@@ -202,6 +207,12 @@ class OAuthActivity : AppCompatActivity() {
                 it.unsubscribe()
             }
         }
+    }
+
+    override fun onSupportNavigateUp(): Boolean {
+        finish()
+
+        return false
     }
 
     private fun deleteCookies() {
