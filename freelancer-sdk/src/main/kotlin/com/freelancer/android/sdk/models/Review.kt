@@ -1,6 +1,7 @@
 package com.freelancer.android.sdk.models
 
 import com.google.gson.annotations.SerializedName
+import java.util.Locale
 
 data class Review(
         @SerializedName("to_user_id")
@@ -74,11 +75,13 @@ data class Review(
         DENIED,
         EXPIRED;
 
-        override fun toString(): String = name.toLowerCase()
+        override fun toString(): String = name.toLowerCase(Locale.US)
     }
 
     enum class ReviewProjectStatus {
         COMPLETE,
-        INCOMPLETE
+        INCOMPLETE;
+
+        override fun toString(): String = name.toLowerCase(Locale.US)
     }
 }
