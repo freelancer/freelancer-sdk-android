@@ -27,7 +27,7 @@ allprojects {
         //Add this block
         //IMPORTANT! : this will soon change to jcentre, in the future if the dependency cannot be resolved please ensure you have the jcentre() line above in your root gradle file
         maven {
-            url "https://freelancer.bintray.com/freelancer-sdk-android/"
+            url  "https://dl.bintray.com/freelancer/freelance-sdk-android"
         }
     }
 }
