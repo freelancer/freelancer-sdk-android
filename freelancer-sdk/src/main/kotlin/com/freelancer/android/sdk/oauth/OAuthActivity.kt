@@ -125,7 +125,8 @@ class OAuthActivity : AppCompatActivity() {
         val flWebViewClient = FLWebViewClient()
         val webSettings = webView.settings
         webSettings.allowFileAccess = false
-        webSettings.javaScriptEnabled = false
+        webSettings.javaScriptEnabled = true
+        webSettings.domStorageEnabled = true
         webView.isVerticalScrollBarEnabled = false
         webView.isHorizontalScrollBarEnabled = false
         webView.webViewClient = flWebViewClient
@@ -146,7 +147,7 @@ class OAuthActivity : AppCompatActivity() {
 
                 val uri = Uri.parse(url)
                 val error = uri.getQueryParameter("error")
-                val reason = uri.getQueryParameter("reason")
+                val reason = uri.getQueryParameter("error_description")
 
                 val intent = Intent()
                 intent.putExtra(KEY_ERROR, OAuthException(error ?: "", reason ?: ""))
