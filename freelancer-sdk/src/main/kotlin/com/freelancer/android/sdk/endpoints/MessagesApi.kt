@@ -14,7 +14,7 @@ interface MessagesApi {
             @Query("messages") messages: List<Long>,
             @Query("contexts[]") contexts: List<Long>,
             @Query("context_type") contextType: String,
-            @Query("is_read") is_read: Boolean,
+            @Query("is_read") isRead: Boolean,
             @Query("offset") offset: Long,
             @Query("limit") limit: Long,
             @Query("from_updated_time") fromUpdatedTime: Long,
