@@ -4,7 +4,7 @@ import com.freelancer.android.sdk.models.Currency
 import com.freelancer.android.sdk.models.PostProjectBudget
 import com.google.gson.annotations.SerializedName
 
-data class CurrenciesAndBudgetsResponse(
+data class BudgetsResponse(
         @SerializedName("currencies")
         val currencies: HashMap<Long, Currency>,
 

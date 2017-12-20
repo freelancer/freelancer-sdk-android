@@ -1,6 +1,6 @@
 package com.freelancer.android.sdk.endpoints
 
-import com.freelancer.android.sdk.models.response.CurrenciesAndBudgetsResponse
+import com.freelancer.android.sdk.models.response.BudgetsResponse
 import retrofit2.http.GET
 import retrofit2.http.Query
 import rx.Observable
@@ -18,5 +18,5 @@ interface BudgetsApi {
             @Query("project_type") projectType: String? = null,
             @Query("lang") lang: String? = null,
             @Query("currency_details") currencyDetails: Boolean = true
-    ): Observable<CurrenciesAndBudgetsResponse>
+    ): Observable<BudgetsResponse>
 }
