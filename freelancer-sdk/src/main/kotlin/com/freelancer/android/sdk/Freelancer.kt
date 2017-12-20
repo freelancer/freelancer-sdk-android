@@ -7,7 +7,7 @@ import com.freelancer.android.sdk.endpoints.CollaborationsApi
 import com.freelancer.android.sdk.endpoints.ContestApi
 import com.freelancer.android.sdk.endpoints.ContestMessagesApi
 import com.freelancer.android.sdk.endpoints.CountriesApi
-import com.freelancer.android.sdk.endpoints.CurrencyAndBudgetsApi
+import com.freelancer.android.sdk.endpoints.CurrenciesApi
 import com.freelancer.android.sdk.endpoints.EntriesApi
 import com.freelancer.android.sdk.endpoints.ExpertGuarunteesApi
 import com.freelancer.android.sdk.endpoints.FilesApi
@@ -62,8 +62,8 @@ class Freelancer(private val authToken: String,
         return getRetrofitApi(BuildConfig.API_PREFIX_COMMON, CountriesApi::class.java)
     }
 
-    fun createCurrencyAndBudgetsApi(): CurrencyAndBudgetsApi {
-        return getRetrofitApi(BuildConfig.API_PREFIX_PROJECTS, CurrencyAndBudgetsApi::class.java)
+    fun createCurrenciesApi(): CurrenciesApi {
+        return getRetrofitApi(BuildConfig.API_PREFIX_PROJECTS, CurrenciesApi::class.java)
     }
 
     fun createEntriesApi(): EntriesApi {
