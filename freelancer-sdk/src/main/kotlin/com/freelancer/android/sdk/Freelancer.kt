@@ -2,6 +2,7 @@ package com.freelancer.android.sdk
 
 import com.freelancer.android.flapi.BuildConfig
 import com.freelancer.android.sdk.endpoints.BidsApi
+import com.freelancer.android.sdk.endpoints.BudgetsApi
 import com.freelancer.android.sdk.endpoints.CategoriesApi
 import com.freelancer.android.sdk.endpoints.CollaborationsApi
 import com.freelancer.android.sdk.endpoints.ContestApi
@@ -64,6 +65,10 @@ class Freelancer(private val authToken: String,
 
     fun createCurrenciesApi(): CurrenciesApi {
         return getRetrofitApi(BuildConfig.API_PREFIX_PROJECTS, CurrenciesApi::class.java)
+    }
+
+   fun createBudgetsApi(): BudgetsApi {
+        return getRetrofitApi(BuildConfig.API_PREFIX_PROJECTS, BudgetsApi::class.java)
     }
 
     fun createEntriesApi(): EntriesApi {

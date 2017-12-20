@@ -1,0 +1,2878 @@
+{
+  "status": "success",
+  "result": {
+    "currencies": {
+      "1": {
+        "code": "USD",
+        "name": "US Dollar",
+        "country": "US",
+        "sign": "$",
+        "exchange_rate": 1.0,
+        "id": 1
+      },
+      "2": {
+        "code": "NZD",
+        "name": "New Zealand Dollar",
+        "country": "NZ",
+        "sign": "$",
+        "exchange_rate": 0.701705,
+        "id": 2
+      },
+      "3": {
+        "code": "AUD",
+        "name": "Australian Dollar",
+        "country": "AU",
+        "sign": "$",
+        "exchange_rate": 0.764341,
+        "id": 3
+      },
+      "4": {
+        "code": "GBP",
+        "name": "British Pounds",
+        "country": "UK",
+        "sign": "\u00a3",
+        "exchange_rate": 1.332625,
+        "id": 4
+      },
+      "5": {
+        "code": "HKD",
+        "name": "HongKong Dollar",
+        "country": "HK",
+        "sign": "$",
+        "exchange_rate": 0.128008,
+        "id": 5
+      },
+      "6": {
+        "code": "SGD",
+        "name": "Singapore Dollar",
+        "country": "SG",
+        "sign": "$",
+        "exchange_rate": 0.742327,
+        "id": 6
+      },
+      "7": {
+        "code": "PHP",
+        "name": "Philippine Peso",
+        "country": "PH",
+        "sign": "\u20b1",
+        "exchange_rate": 0.019816,
+        "id": 7
+      },
+      "8": {
+        "code": "EUR",
+        "name": "Euro",
+        "country": "EU",
+        "sign": "\u20ac",
+        "exchange_rate": 1.17494,
+        "id": 8
+      },
+      "9": {
+        "code": "CAD",
+        "name": "Canadian Dollar",
+        "country": "CA",
+        "sign": "$",
+        "exchange_rate": 0.77685,
+        "id": 9
+      },
+      "10": {
+        "code": "ZAR",
+        "name": "South African Rand",
+        "country": "ZA",
+        "sign": "R",
+        "exchange_rate": 0.075341,
+        "id": 10
+      },
+      "11": {
+        "code": "INR",
+        "name": "Indian Rupee",
+        "country": "IN",
+        "sign": "\u20b9",
+        "exchange_rate": 0.015605,
+        "id": 11
+      },
+      "12": {
+        "code": "JMD",
+        "name": "Jamaican Dollar",
+        "country": "JM",
+        "sign": "$",
+        "exchange_rate": 0.007955,
+        "id": 12
+      },
+      "13": {
+        "code": "CLP",
+        "name": "Chilean Peso",
+        "country": "CL",
+        "sign": "$",
+        "exchange_rate": 0.00157,
+        "id": 13
+      },
+      "14": {
+        "code": "MXN",
+        "name": "Mexican Peso",
+        "country": "MX",
+        "sign": "$",
+        "exchange_rate": 0.052244,
+        "id": 14
+      },
+      "15": {
+        "code": "IDR",
+        "name": "Indonesian Rupiah",
+        "country": "ID",
+        "sign": "Rp",
+        "exchange_rate": 7.4e-05,
+        "id": 15
+      },
+      "16": {
+        "code": "MYR",
+        "name": "Malaysian Ringgit",
+        "country": "MY",
+        "sign": "RM",
+        "exchange_rate": 0.24513,
+        "id": 16
+      },
+      "17": {
+        "code": "SEK",
+        "name": "Swedish Krona",
+        "country": "SE",
+        "sign": "kr",
+        "exchange_rate": 0.117647,
+        "id": 17
+      },
+      "18": {
+        "code": "JPY",
+        "name": "Japanese Yen",
+        "country": "JP",
+        "sign": "\u00a5",
+        "exchange_rate": 0.00887,
+        "id": 18
+      },
+      "19": {
+        "code": "PLN",
+        "name": "Polish Zloty",
+        "country": "PL",
+        "sign": "z\u0142",
+        "exchange_rate": 0.279472,
+        "id": 19
+      },
+      "20": {
+        "code": "BRL",
+        "name": "Brazilian Real",
+        "country": "BR",
+        "sign": "R$",
+        "exchange_rate": 0.302016,
+        "id": 20
+      },
+      "21": {
+        "code": "CNY",
+        "name": "Chinese Yuan",
+        "country": "CN",
+        "sign": "\uffe5",
+        "exchange_rate": 0.151542,
+        "id": 21
+      },
+      "22": {
+        "code": "DKK",
+        "name": "Danish Krone",
+        "country": "DK",
+        "sign": "kr",
+        "exchange_rate": 0.158515,
+        "id": 22
+      },
+      "23": {
+        "code": "VND",
+        "name": "Vietnamese Dong",
+        "country": "VN",
+        "sign": "\u20ab",
+        "exchange_rate": 4.4e-05,
+        "id": 23
+      },
+      "24": {
+        "code": "AED",
+        "name": "United Arab Emirates Dirham",
+        "country": "AE",
+        "sign": "\u062f.\u0625",
+        "exchange_rate": 0.272265,
+        "id": 24
+      },
+      "25": {
+        "code": "ARS",
+        "name": "Argentine Peso",
+        "country": "AR",
+        "sign": "$",
+        "exchange_rate": 0.057488,
+        "id": 25
+      },
+      "32": {
+        "code": "KRW",
+        "name": "South Korean Won",
+        "country": "KR",
+        "sign": "\u20a9",
+        "exchange_rate": 0.000925,
+        "id": 32
+      }
+    },
+    "budgets": [
+      {
+        "currency_id": 1,
+        "minimum": 2.0,
+        "maximum": 8.0,
+        "project_type": "hourly",
+        "name": "Basic"
+      },
+      {
+        "currency_id": 1,
+        "minimum": 8.0,
+        "maximum": 15.0,
+        "project_type": "hourly",
+        "name": "Moderate"
+      },
+      {
+        "currency_id": 1,
+        "minimum": 10.0,
+        "maximum": 30.0,
+        "project_type": "fixed",
+        "name": "Micro Project"
+      },
+      {
+        "currency_id": 1,
+        "minimum": 15.0,
+        "maximum": 25.0,
+        "project_type": "hourly",
+        "name": "Standard"
+      },
+      {
+        "currency_id": 1,
+        "minimum": 25.0,
+        "maximum": 50.0,
+        "project_type": "hourly",
+        "name": "Skilled"
+      },
+      {
+        "currency_id": 1,
+        "minimum": 30.0,
+        "maximum": 250.0,
+        "project_type": "fixed",
+        "name": "Simple Project"
+      },
+      {
+        "currency_id": 1,
+        "minimum": 50.0,
+        "maximum": null,
+        "project_type": "hourly",
+        "name": "Expert"
+      },
+      {
+        "currency_id": 1,
+        "minimum": 250.0,
+        "maximum": 750.0,
+        "project_type": "fixed",
+        "name": "Very Small Project"
+      },
+      {
+        "currency_id": 1,
+        "minimum": 750.0,
+        "maximum": 1500.0,
+        "project_type": "fixed",
+        "name": "Small Project"
+      },
+      {
+        "currency_id": 1,
+        "minimum": 1500.0,
+        "maximum": 3000.0,
+        "project_type": "fixed",
+        "name": "Medium Project"
+      },
+      {
+        "currency_id": 1,
+        "minimum": 3000.0,
+        "maximum": 5000.0,
+        "project_type": "fixed",
+        "name": "Large Project"
+      },
+      {
+        "currency_id": 1,
+        "minimum": 5000.0,
+        "maximum": 10000.0,
+        "project_type": "fixed",
+        "name": "Larger Project"
+      },
+      {
+        "currency_id": 1,
+        "minimum": 10000.0,
+        "maximum": 20000.0,
+        "project_type": "fixed",
+        "name": "Very Large Prject"
+      },
+      {
+        "currency_id": 1,
+        "minimum": 20000.0,
+        "maximum": 50000.0,
+        "project_type": "fixed",
+        "name": "Huge Project"
+      },
+      {
+        "currency_id": 1,
+        "minimum": 50000.0,
+        "maximum": null,
+        "project_type": "fixed",
+        "name": "Major Project"
+      },
+      {
+        "currency_id": 2,
+        "minimum": 3.0,
+        "maximum": 10.0,
+        "project_type": "hourly",
+        "name": "Basic"
+      },
+      {
+        "currency_id": 2,
+        "minimum": 10.0,
+        "maximum": 20.0,
+        "project_type": "hourly",
+        "name": "Moderate"
+      },
+      {
+        "currency_id": 2,
+        "minimum": 14.0,
+        "maximum": 30.0,
+        "project_type": "fixed",
+        "name": "Micro Project"
+      },
+      {
+        "currency_id": 2,
+        "minimum": 20.0,
+        "maximum": 30.0,
+        "project_type": "hourly",
+        "name": "Standard"
+      },
+      {
+        "currency_id": 2,
+        "minimum": 30.0,
+        "maximum": 60.0,
+        "project_type": "hourly",
+        "name": "Skilled"
+      },
+      {
+        "currency_id": 2,
+        "minimum": 30.0,
+        "maximum": 250.0,
+        "project_type": "fixed",
+        "name": "Simple Project"
+      },
+      {
+        "currency_id": 2,
+        "minimum": 60.0,
+        "maximum": null,
+        "project_type": "hourly",
+        "name": "Expert"
+      },
+      {
+        "currency_id": 2,
+        "minimum": 250.0,
+        "maximum": 750.0,
+        "project_type": "fixed",
+        "name": "Very Small Project"
+      },
+      {
+        "currency_id": 2,
+        "minimum": 750.0,
+        "maximum": 1500.0,
+        "project_type": "fixed",
+        "name": "Small Project"
+      },
+      {
+        "currency_id": 2,
+        "minimum": 1500.0,
+        "maximum": 3000.0,
+        "project_type": "fixed",
+        "name": "Medium Project"
+      },
+      {
+        "currency_id": 2,
+        "minimum": 3000.0,
+        "maximum": 5000.0,
+        "project_type": "fixed",
+        "name": "Large Project"
+      },
+      {
+        "currency_id": 2,
+        "minimum": 5000.0,
+        "maximum": 10000.0,
+        "project_type": "fixed",
+        "name": "Larger Project"
+      },
+      {
+        "currency_id": 2,
+        "minimum": 10000.0,
+        "maximum": 20000.0,
+        "project_type": "fixed",
+        "name": "Very Large Project"
+      },
+      {
+        "currency_id": 2,
+        "minimum": 20000.0,
+        "maximum": 50000.0,
+        "project_type": "fixed",
+        "name": "Huge Project"
+      },
+      {
+        "currency_id": 2,
+        "minimum": 50000.0,
+        "maximum": null,
+        "project_type": "fixed",
+        "name": "Major Project"
+      },
+      {
+        "currency_id": 3,
+        "minimum": 2.0,
+        "maximum": 8.0,
+        "project_type": "hourly",
+        "name": "Basic"
+      },
+      {
+        "currency_id": 3,
+        "minimum": 8.0,
+        "maximum": 15.0,
+        "project_type": "hourly",
+        "name": "Moderate"
+      },
+      {
+        "currency_id": 3,
+        "minimum": 10.0,
+        "maximum": 30.0,
+        "project_type": "fixed",
+        "name": "Micro Project"
+      },
+      {
+        "currency_id": 3,
+        "minimum": 15.0,
+        "maximum": 25.0,
+        "project_type": "hourly",
+        "name": "Standard"
+      },
+      {
+        "currency_id": 3,
+        "minimum": 25.0,
+        "maximum": 50.0,
+        "project_type": "hourly",
+        "name": "Skilled"
+      },
+      {
+        "currency_id": 3,
+        "minimum": 30.0,
+        "maximum": 250.0,
+        "project_type": "fixed",
+        "name": "Simple Project"
+      },
+      {
+        "currency_id": 3,
+        "minimum": 50.0,
+        "maximum": null,
+        "project_type": "hourly",
+        "name": "Expert"
+      },
+      {
+        "currency_id": 3,
+        "minimum": 250.0,
+        "maximum": 750.0,
+        "project_type": "fixed",
+        "name": "Very Small Project"
+      },
+      {
+        "currency_id": 3,
+        "minimum": 750.0,
+        "maximum": 1500.0,
+        "project_type": "fixed",
+        "name": "Small Project"
+      },
+      {
+        "currency_id": 3,
+        "minimum": 1500.0,
+        "maximum": 3000.0,
+        "project_type": "fixed",
+        "name": "Medium Project"
+      },
+      {
+        "currency_id": 3,
+        "minimum": 3000.0,
+        "maximum": 5000.0,
+        "project_type": "fixed",
+        "name": "Large Project"
+      },
+      {
+        "currency_id": 3,
+        "minimum": 5000.0,
+        "maximum": 10000.0,
+        "project_type": "fixed",
+        "name": "Larger Project"
+      },
+      {
+        "currency_id": 3,
+        "minimum": 10000.0,
+        "maximum": 20000.0,
+        "project_type": "fixed",
+        "name": "Very Large Project"
+      },
+      {
+        "currency_id": 3,
+        "minimum": 20000.0,
+        "maximum": 50000.0,
+        "project_type": "fixed",
+        "name": "Huge Project"
+      },
+      {
+        "currency_id": 3,
+        "minimum": 50000.0,
+        "maximum": null,
+        "project_type": "fixed",
+        "name": "Major Project"
+      },
+      {
+        "currency_id": 4,
+        "minimum": 2.0,
+        "maximum": 5.0,
+        "project_type": "hourly",
+        "name": "Basic"
+      },
+      {
+        "currency_id": 4,
+        "minimum": 5.0,
+        "maximum": 10.0,
+        "project_type": "hourly",
+        "name": "Moderate"
+      },
+      {
+        "currency_id": 4,
+        "minimum": 10.0,
+        "maximum": 15.0,
+        "project_type": "hourly",
+        "name": "Standard"
+      },
+      {
+        "currency_id": 4,
+        "minimum": 18.0,
+        "maximum": 36.0,
+        "project_type": "hourly",
+        "name": "Skilled"
+      },
+      {
+        "currency_id": 4,
+        "minimum": 20.0,
+        "maximum": 100.0,
+        "project_type": "fixed",
+        "name": "Micro Project"
+      },
+      {
+        "currency_id": 4,
+        "minimum": 36.0,
+        "maximum": null,
+        "project_type": "hourly",
+        "name": "Expert"
+      },
+      {
+        "currency_id": 4,
+        "minimum": 100.0,
+        "maximum": 400.0,
+        "project_type": "fixed",
+        "name": "Simple Project"
+      },
+      {
+        "currency_id": 4,
+        "minimum": 400.0,
+        "maximum": 900.0,
+        "project_type": "fixed",
+        "name": "Very Small Project"
+      },
+      {
+        "currency_id": 4,
+        "minimum": 900.0,
+        "maximum": 2000.0,
+        "project_type": "fixed",
+        "name": "Small Project"
+      },
+      {
+        "currency_id": 4,
+        "minimum": 2000.0,
+        "maximum": 4000.0,
+        "project_type": "fixed",
+        "name": "Medium Project"
+      },
+      {
+        "currency_id": 4,
+        "minimum": 4000.0,
+        "maximum": 8000.0,
+        "project_type": "fixed",
+        "name": "Large Project"
+      },
+      {
+        "currency_id": 4,
+        "minimum": 8000.0,
+        "maximum": 15000.0,
+        "project_type": "fixed",
+        "name": "Larger Project"
+      },
+      {
+        "currency_id": 4,
+        "minimum": 15000.0,
+        "maximum": 30000.0,
+        "project_type": "fixed",
+        "name": "Very Large Project"
+      },
+      {
+        "currency_id": 4,
+        "minimum": 30000.0,
+        "maximum": 50000.0,
+        "project_type": "fixed",
+        "name": "Huge Project"
+      },
+      {
+        "currency_id": 4,
+        "minimum": 50000.0,
+        "maximum": null,
+        "project_type": "fixed",
+        "name": "Major Project"
+      },
+      {
+        "currency_id": 5,
+        "minimum": 16.0,
+        "maximum": 65.0,
+        "project_type": "hourly",
+        "name": "Basic"
+      },
+      {
+        "currency_id": 5,
+        "minimum": 65.0,
+        "maximum": 115.0,
+        "project_type": "hourly",
+        "name": "Moderate"
+      },
+      {
+        "currency_id": 5,
+        "minimum": 80.0,
+        "maximum": 240.0,
+        "project_type": "fixed",
+        "name": "Micro Project"
+      },
+      {
+        "currency_id": 5,
+        "minimum": 115.0,
+        "maximum": 200.0,
+        "project_type": "hourly",
+        "name": "Standard"
+      },
+      {
+        "currency_id": 5,
+        "minimum": 200.0,
+        "maximum": 400.0,
+        "project_type": "hourly",
+        "name": "Skilled"
+      },
+      {
+        "currency_id": 5,
+        "minimum": 240.0,
+        "maximum": 2000.0,
+        "project_type": "fixed",
+        "name": "Simple Project"
+      },
+      {
+        "currency_id": 5,
+        "minimum": 400.0,
+        "maximum": null,
+        "project_type": "hourly",
+        "name": "Expert"
+      },
+      {
+        "currency_id": 5,
+        "minimum": 2000.0,
+        "maximum": 6000.0,
+        "project_type": "fixed",
+        "name": "Very Small Project"
+      },
+      {
+        "currency_id": 5,
+        "minimum": 6000.0,
+        "maximum": 12000.0,
+        "project_type": "fixed",
+        "name": "Small Project"
+      },
+      {
+        "currency_id": 5,
+        "minimum": 12000.0,
+        "maximum": 24000.0,
+        "project_type": "fixed",
+        "name": "Medium Project"
+      },
+      {
+        "currency_id": 5,
+        "minimum": 24000.0,
+        "maximum": 40000.0,
+        "project_type": "fixed",
+        "name": "Large Project"
+      },
+      {
+        "currency_id": 5,
+        "minimum": 40000.0,
+        "maximum": 80000.0,
+        "project_type": "fixed",
+        "name": "Larger Project"
+      },
+      {
+        "currency_id": 5,
+        "minimum": 80000.0,
+        "maximum": 160000.0,
+        "project_type": "fixed",
+        "name": "Very Large Project"
+      },
+      {
+        "currency_id": 5,
+        "minimum": 160000.0,
+        "maximum": 400000.0,
+        "project_type": "fixed",
+        "name": "Huge Project"
+      },
+      {
+        "currency_id": 5,
+        "minimum": 400000.0,
+        "maximum": null,
+        "project_type": "fixed",
+        "name": "Major Project"
+      },
+      {
+        "currency_id": 6,
+        "minimum": 3.0,
+        "maximum": 10.0,
+        "project_type": "hourly",
+        "name": "Basic"
+      },
+      {
+        "currency_id": 6,
+        "minimum": 10.0,
+        "maximum": 20.0,
+        "project_type": "hourly",
+        "name": "Moderate"
+      },
+      {
+        "currency_id": 6,
+        "minimum": 12.0,
+        "maximum": 30.0,
+        "project_type": "fixed",
+        "name": "Micro Project"
+      },
+      {
+        "currency_id": 6,
+        "minimum": 20.0,
+        "maximum": 30.0,
+        "project_type": "hourly",
+        "name": "Standard"
+      },
+      {
+        "currency_id": 6,
+        "minimum": 30.0,
+        "maximum": 60.0,
+        "project_type": "hourly",
+        "name": "Skilled"
+      },
+      {
+        "currency_id": 6,
+        "minimum": 30.0,
+        "maximum": 250.0,
+        "project_type": "fixed",
+        "name": "Simple Project"
+      },
+      {
+        "currency_id": 6,
+        "minimum": 60.0,
+        "maximum": null,
+        "project_type": "hourly",
+        "name": "Expert"
+      },
+      {
+        "currency_id": 6,
+        "minimum": 250.0,
+        "maximum": 750.0,
+        "project_type": "fixed",
+        "name": "Very Small Project"
+      },
+      {
+        "currency_id": 6,
+        "minimum": 750.0,
+        "maximum": 1500.0,
+        "project_type": "fixed",
+        "name": "Small Project"
+      },
+      {
+        "currency_id": 6,
+        "minimum": 1500.0,
+        "maximum": 3000.0,
+        "project_type": "fixed",
+        "name": "Medium Project"
+      },
+      {
+        "currency_id": 6,
+        "minimum": 3000.0,
+        "maximum": 5000.0,
+        "project_type": "fixed",
+        "name": "Large Project"
+      },
+      {
+        "currency_id": 6,
+        "minimum": 5000.0,
+        "maximum": 10000.0,
+        "project_type": "fixed",
+        "name": "Larger Project"
+      },
+      {
+        "currency_id": 6,
+        "minimum": 10000.0,
+        "maximum": 20000.0,
+        "project_type": "fixed",
+        "name": "Very Large Project"
+      },
+      {
+        "currency_id": 6,
+        "minimum": 20000.0,
+        "maximum": 50000.0,
+        "project_type": "fixed",
+        "name": "Huge Project"
+      },
+      {
+        "currency_id": 6,
+        "minimum": 50000.0,
+        "maximum": null,
+        "project_type": "fixed",
+        "name": "Major Project"
+      },
+      {
+        "currency_id": 7,
+        "minimum": 90.0,
+        "maximum": 350.0,
+        "project_type": "hourly",
+        "name": "Basic"
+      },
+      {
+        "currency_id": 7,
+        "minimum": 350.0,
+        "maximum": 650.0,
+        "project_type": "hourly",
+        "name": "Moderate"
+      },
+      {
+        "currency_id": 7,
+        "minimum": 440.0,
+        "maximum": 1200.0,
+        "project_type": "fixed",
+        "name": "Micro Project"
+      },
+      {
+        "currency_id": 7,
+        "minimum": 650.0,
+        "maximum": 1100.0,
+        "project_type": "hourly",
+        "name": "Standard"
+      },
+      {
+        "currency_id": 7,
+        "minimum": 1100.0,
+        "maximum": 2200.0,
+        "project_type": "hourly",
+        "name": "Skilled"
+      },
+      {
+        "currency_id": 7,
+        "minimum": 1200.0,
+        "maximum": 10000.0,
+        "project_type": "fixed",
+        "name": "Simple Project"
+      },
+      {
+        "currency_id": 7,
+        "minimum": 2200.0,
+        "maximum": null,
+        "project_type": "hourly",
+        "name": "Expert"
+      },
+      {
+        "currency_id": 7,
+        "minimum": 10000.0,
+        "maximum": 30000.0,
+        "project_type": "fixed",
+        "name": "Very Small Project"
+      },
+      {
+        "currency_id": 7,
+        "minimum": 30000.0,
+        "maximum": 60000.0,
+        "project_type": "fixed",
+        "name": "Small Project"
+      },
+      {
+        "currency_id": 7,
+        "minimum": 60000.0,
+        "maximum": 120000.0,
+        "project_type": "fixed",
+        "name": "Medium Project"
+      },
+      {
+        "currency_id": 7,
+        "minimum": 120000.0,
+        "maximum": 200000.0,
+        "project_type": "fixed",
+        "name": "Large Project"
+      },
+      {
+        "currency_id": 7,
+        "minimum": 200000.0,
+        "maximum": 400000.0,
+        "project_type": "fixed",
+        "name": "Larger Project"
+      },
+      {
+        "currency_id": 7,
+        "minimum": 400000.0,
+        "maximum": 800000.0,
+        "project_type": "fixed",
+        "name": "Very Large Project"
+      },
+      {
+        "currency_id": 7,
+        "minimum": 800000.0,
+        "maximum": 2000000.0,
+        "project_type": "fixed",
+        "name": "Huge Project"
+      },
+      {
+        "currency_id": 7,
+        "minimum": 2000000.0,
+        "maximum": null,
+        "project_type": "fixed",
+        "name": "Major Project"
+      },
+      {
+        "currency_id": 8,
+        "minimum": 2.0,
+        "maximum": 6.0,
+        "project_type": "hourly",
+        "name": "Basic"
+      },
+      {
+        "currency_id": 8,
+        "minimum": 6.0,
+        "maximum": 12.0,
+        "project_type": "hourly",
+        "name": "Moderate"
+      },
+      {
+        "currency_id": 8,
+        "minimum": 8.0,
+        "maximum": 30.0,
+        "project_type": "fixed",
+        "name": "Micro Project"
+      },
+      {
+        "currency_id": 8,
+        "minimum": 12.0,
+        "maximum": 18.0,
+        "project_type": "hourly",
+        "name": "Standard"
+      },
+      {
+        "currency_id": 8,
+        "minimum": 18.0,
+        "maximum": 36.0,
+        "project_type": "hourly",
+        "name": "Skilled"
+      },
+      {
+        "currency_id": 8,
+        "minimum": 30.0,
+        "maximum": 250.0,
+        "project_type": "fixed",
+        "name": "Simple Project"
+      },
+      {
+        "currency_id": 8,
+        "minimum": 36.0,
+        "maximum": null,
+        "project_type": "hourly",
+        "name": "Expert"
+      },
+      {
+        "currency_id": 8,
+        "minimum": 250.0,
+        "maximum": 750.0,
+        "project_type": "fixed",
+        "name": "Very Small Project"
+      },
+      {
+        "currency_id": 8,
+        "minimum": 750.0,
+        "maximum": 1500.0,
+        "project_type": "fixed",
+        "name": "Small Project"
+      },
+      {
+        "currency_id": 8,
+        "minimum": 1500.0,
+        "maximum": 3000.0,
+        "project_type": "fixed",
+        "name": "Medium Project"
+      },
+      {
+        "currency_id": 8,
+        "minimum": 3000.0,
+        "maximum": 5000.0,
+        "project_type": "fixed",
+        "name": "Large Project"
+      },
+      {
+        "currency_id": 8,
+        "minimum": 5000.0,
+        "maximum": 10000.0,
+        "project_type": "fixed",
+        "name": "Larger Project"
+      },
+      {
+        "currency_id": 8,
+        "minimum": 10000.0,
+        "maximum": 20000.0,
+        "project_type": "fixed",
+        "name": "Very Large Project"
+      },
+      {
+        "currency_id": 8,
+        "minimum": 20000.0,
+        "maximum": 50000.0,
+        "project_type": "fixed",
+        "name": "Huge Project"
+      },
+      {
+        "currency_id": 8,
+        "minimum": 50000.0,
+        "maximum": null,
+        "project_type": "fixed",
+        "name": "Major Project"
+      },
+      {
+        "currency_id": 9,
+        "minimum": 2.0,
+        "maximum": 8.0,
+        "project_type": "hourly",
+        "name": "Basic"
+      },
+      {
+        "currency_id": 9,
+        "minimum": 8.0,
+        "maximum": 15.0,
+        "project_type": "hourly",
+        "name": "Moderate"
+      },
+      {
+        "currency_id": 9,
+        "minimum": 15.0,
+        "maximum": 25.0,
+        "project_type": "hourly",
+        "name": "Standard"
+      },
+      {
+        "currency_id": 9,
+        "minimum": 25.0,
+        "maximum": 50.0,
+        "project_type": "hourly",
+        "name": "Skilled"
+      },
+      {
+        "currency_id": 9,
+        "minimum": 25.0,
+        "maximum": 100.0,
+        "project_type": "fixed",
+        "name": "Micro Project"
+      },
+      {
+        "currency_id": 9,
+        "minimum": 50.0,
+        "maximum": null,
+        "project_type": "hourly",
+        "name": "Expert"
+      },
+      {
+        "currency_id": 9,
+        "minimum": 100.0,
+        "maximum": 500.0,
+        "project_type": "fixed",
+        "name": "Simple Project"
+      },
+      {
+        "currency_id": 9,
+        "minimum": 500.0,
+        "maximum": 1000.0,
+        "project_type": "fixed",
+        "name": "Very Small Project"
+      },
+      {
+        "currency_id": 9,
+        "minimum": 1000.0,
+        "maximum": 2000.0,
+        "project_type": "fixed",
+        "name": "Small Project"
+      },
+      {
+        "currency_id": 9,
+        "minimum": 2000.0,
+        "maximum": 4000.0,
+        "project_type": "fixed",
+        "name": "Medium Project"
+      },
+      {
+        "currency_id": 9,
+        "minimum": 4000.0,
+        "maximum": 8000.0,
+        "project_type": "fixed",
+        "name": "Large Project"
+      },
+      {
+        "currency_id": 9,
+        "minimum": 8000.0,
+        "maximum": 15000.0,
+        "project_type": "fixed",
+        "name": "Larger Project"
+      },
+      {
+        "currency_id": 9,
+        "minimum": 15000.0,
+        "maximum": 30000.0,
+        "project_type": "fixed",
+        "name": "Very Large Project"
+      },
+      {
+        "currency_id": 9,
+        "minimum": 30000.0,
+        "maximum": 50000.0,
+        "project_type": "fixed",
+        "name": "Huge Project"
+      },
+      {
+        "currency_id": 9,
+        "minimum": 50000.0,
+        "maximum": null,
+        "project_type": "fixed",
+        "name": "Major Project"
+      },
+      {
+        "currency_id": 10,
+        "minimum": 16.0,
+        "maximum": 65.0,
+        "project_type": "hourly",
+        "name": "Basic"
+      },
+      {
+        "currency_id": 10,
+        "minimum": 65.0,
+        "maximum": 115.0,
+        "project_type": "hourly",
+        "name": "Moderate"
+      },
+      {
+        "currency_id": 10,
+        "minimum": 100.0,
+        "maximum": 210.0,
+        "project_type": "fixed",
+        "name": "Micro Project"
+      },
+      {
+        "currency_id": 10,
+        "minimum": 115.0,
+        "maximum": 200.0,
+        "project_type": "hourly",
+        "name": "Standard"
+      },
+      {
+        "currency_id": 10,
+        "minimum": 200.0,
+        "maximum": 400.0,
+        "project_type": "hourly",
+        "name": "Skilled"
+      },
+      {
+        "currency_id": 10,
+        "minimum": 210.0,
+        "maximum": 1750.0,
+        "project_type": "fixed",
+        "name": "Simple Project"
+      },
+      {
+        "currency_id": 10,
+        "minimum": 400.0,
+        "maximum": null,
+        "project_type": "hourly",
+        "name": "Expert"
+      },
+      {
+        "currency_id": 10,
+        "minimum": 1750.0,
+        "maximum": 5250.0,
+        "project_type": "fixed",
+        "name": "Very Small Project"
+      },
+      {
+        "currency_id": 10,
+        "minimum": 5250.0,
+        "maximum": 10500.0,
+        "project_type": "fixed",
+        "name": "Small Project"
+      },
+      {
+        "currency_id": 10,
+        "minimum": 10500.0,
+        "maximum": 21000.0,
+        "project_type": "fixed",
+        "name": "Medium Project"
+      },
+      {
+        "currency_id": 10,
+        "minimum": 21000.0,
+        "maximum": 35000.0,
+        "project_type": "fixed",
+        "name": "Large Project"
+      },
+      {
+        "currency_id": 10,
+        "minimum": 35000.0,
+        "maximum": 75000.0,
+        "project_type": "fixed",
+        "name": "Larger Project"
+      },
+      {
+        "currency_id": 10,
+        "minimum": 75000.0,
+        "maximum": 150000.0,
+        "project_type": "fixed",
+        "name": "Very Large Project"
+      },
+      {
+        "currency_id": 10,
+        "minimum": 150000.0,
+        "maximum": 350000.0,
+        "project_type": "fixed",
+        "name": "Huge Project"
+      },
+      {
+        "currency_id": 10,
+        "minimum": 350000.0,
+        "maximum": null,
+        "project_type": "fixed",
+        "name": "Major Project"
+      },
+      {
+        "currency_id": 11,
+        "minimum": 100.0,
+        "maximum": 400.0,
+        "project_type": "hourly",
+        "name": "Basic"
+      },
+      {
+        "currency_id": 11,
+        "minimum": 400.0,
+        "maximum": 750.0,
+        "project_type": "hourly",
+        "name": "Moderate"
+      },
+      {
+        "currency_id": 11,
+        "minimum": 600.0,
+        "maximum": 1500.0,
+        "project_type": "fixed",
+        "name": "Micro Project"
+      },
+      {
+        "currency_id": 11,
+        "minimum": 750.0,
+        "maximum": 1250.0,
+        "project_type": "hourly",
+        "name": "Standard"
+      },
+      {
+        "currency_id": 11,
+        "minimum": 1250.0,
+        "maximum": 2500.0,
+        "project_type": "hourly",
+        "name": "Skilled"
+      },
+      {
+        "currency_id": 11,
+        "minimum": 1500.0,
+        "maximum": 12500.0,
+        "project_type": "fixed",
+        "name": "Simple Project"
+      },
+      {
+        "currency_id": 11,
+        "minimum": 2500.0,
+        "maximum": null,
+        "project_type": "hourly",
+        "name": "Expert"
+      },
+      {
+        "currency_id": 11,
+        "minimum": 12500.0,
+        "maximum": 37500.0,
+        "project_type": "fixed",
+        "name": "Very Small Project"
+      },
+      {
+        "currency_id": 11,
+        "minimum": 37500.0,
+        "maximum": 75000.0,
+        "project_type": "fixed",
+        "name": "Small Project"
+      },
+      {
+        "currency_id": 11,
+        "minimum": 75000.0,
+        "maximum": 150000.0,
+        "project_type": "fixed",
+        "name": "Medium Project"
+      },
+      {
+        "currency_id": 11,
+        "minimum": 150000.0,
+        "maximum": 250000.0,
+        "project_type": "fixed",
+        "name": "Large Project"
+      },
+      {
+        "currency_id": 11,
+        "minimum": 250000.0,
+        "maximum": 500000.0,
+        "project_type": "fixed",
+        "name": "Larger Project"
+      },
+      {
+        "currency_id": 11,
+        "minimum": 500000.0,
+        "maximum": 1000000.0,
+        "project_type": "fixed",
+        "name": "Very Large Project"
+      },
+      {
+        "currency_id": 11,
+        "minimum": 1000000.0,
+        "maximum": 2500000.0,
+        "project_type": "fixed",
+        "name": "Huge Project"
+      },
+      {
+        "currency_id": 11,
+        "minimum": 2500000.0,
+        "maximum": null,
+        "project_type": "fixed",
+        "name": "Major Project"
+      },
+      {
+        "currency_id": 12,
+        "minimum": 180.0,
+        "maximum": 720.0,
+        "project_type": "hourly",
+        "name": "Basic"
+      },
+      {
+        "currency_id": 12,
+        "minimum": 720.0,
+        "maximum": 1350.0,
+        "project_type": "hourly",
+        "name": "Moderate"
+      },
+      {
+        "currency_id": 12,
+        "minimum": 900.0,
+        "maximum": 2700.0,
+        "project_type": "fixed",
+        "name": "Micro Project"
+      },
+      {
+        "currency_id": 12,
+        "minimum": 1350.0,
+        "maximum": 2250.0,
+        "project_type": "hourly",
+        "name": "Standard"
+      },
+      {
+        "currency_id": 12,
+        "minimum": 2250.0,
+        "maximum": 4500.0,
+        "project_type": "hourly",
+        "name": "Skilled"
+      },
+      {
+        "currency_id": 12,
+        "minimum": 2700.0,
+        "maximum": 22500.0,
+        "project_type": "fixed",
+        "name": "Simple Project"
+      },
+      {
+        "currency_id": 12,
+        "minimum": 4500.0,
+        "maximum": null,
+        "project_type": "hourly",
+        "name": "Expert"
+      },
+      {
+        "currency_id": 12,
+        "minimum": 22500.0,
+        "maximum": 67500.0,
+        "project_type": "fixed",
+        "name": "Very Small Project"
+      },
+      {
+        "currency_id": 12,
+        "minimum": 67500.0,
+        "maximum": 135000.0,
+        "project_type": "fixed",
+        "name": "Small Project"
+      },
+      {
+        "currency_id": 12,
+        "minimum": 135000.0,
+        "maximum": 270000.0,
+        "project_type": "fixed",
+        "name": "Medium Project"
+      },
+      {
+        "currency_id": 12,
+        "minimum": 270000.0,
+        "maximum": 450000.0,
+        "project_type": "fixed",
+        "name": "Large Project"
+      },
+      {
+        "currency_id": 12,
+        "minimum": 450000.0,
+        "maximum": 1000000.0,
+        "project_type": "fixed",
+        "name": "Larger Project"
+      },
+      {
+        "currency_id": 12,
+        "minimum": 1000000.0,
+        "maximum": 2000000.0,
+        "project_type": "fixed",
+        "name": "Very Large Project"
+      },
+      {
+        "currency_id": 12,
+        "minimum": 2000000.0,
+        "maximum": 5000000.0,
+        "project_type": "fixed",
+        "name": "Huge Project"
+      },
+      {
+        "currency_id": 12,
+        "minimum": 5000000.0,
+        "maximum": null,
+        "project_type": "fixed",
+        "name": "Major Project"
+      },
+      {
+        "currency_id": 13,
+        "minimum": 1000.0,
+        "maximum": 4000.0,
+        "project_type": "hourly",
+        "name": "Basic"
+      },
+      {
+        "currency_id": 13,
+        "minimum": 4000.0,
+        "maximum": 7500.0,
+        "project_type": "hourly",
+        "name": "Moderate"
+      },
+      {
+        "currency_id": 13,
+        "minimum": 5000.0,
+        "maximum": 15000.0,
+        "project_type": "fixed",
+        "name": "Micro Project"
+      },
+      {
+        "currency_id": 13,
+        "minimum": 7500.0,
+        "maximum": 12500.0,
+        "project_type": "hourly",
+        "name": "Standard"
+      },
+      {
+        "currency_id": 13,
+        "minimum": 12500.0,
+        "maximum": 25000.0,
+        "project_type": "hourly",
+        "name": "Skilled"
+      },
+      {
+        "currency_id": 13,
+        "minimum": 15000.0,
+        "maximum": 125000.0,
+        "project_type": "fixed",
+        "name": "Simple Project"
+      },
+      {
+        "currency_id": 13,
+        "minimum": 25000.0,
+        "maximum": null,
+        "project_type": "hourly",
+        "name": "Expert"
+      },
+      {
+        "currency_id": 13,
+        "minimum": 125000.0,
+        "maximum": 375000.0,
+        "project_type": "fixed",
+        "name": "Very Small Project"
+      },
+      {
+        "currency_id": 13,
+        "minimum": 375000.0,
+        "maximum": 750000.0,
+        "project_type": "fixed",
+        "name": "Small Project"
+      },
+      {
+        "currency_id": 13,
+        "minimum": 750000.0,
+        "maximum": 1500000.0,
+        "project_type": "fixed",
+        "name": "Medium Project"
+      },
+      {
+        "currency_id": 13,
+        "minimum": 1500000.0,
+        "maximum": 2500000.0,
+        "project_type": "fixed",
+        "name": "Large Project"
+      },
+      {
+        "currency_id": 13,
+        "minimum": 2500000.0,
+        "maximum": 5000000.0,
+        "project_type": "fixed",
+        "name": "Larger Project"
+      },
+      {
+        "currency_id": 13,
+        "minimum": 5000000.0,
+        "maximum": 10000000.0,
+        "project_type": "fixed",
+        "name": "Very Large Project"
+      },
+      {
+        "currency_id": 13,
+        "minimum": 10000000.0,
+        "maximum": 25000000.0,
+        "project_type": "fixed",
+        "name": "Huge Project"
+      },
+      {
+        "currency_id": 13,
+        "minimum": 25000000.0,
+        "maximum": null,
+        "project_type": "fixed",
+        "name": "Major Project"
+      },
+      {
+        "currency_id": 14,
+        "minimum": 30.0,
+        "maximum": 120.0,
+        "project_type": "hourly",
+        "name": "Basic"
+      },
+      {
+        "currency_id": 14,
+        "minimum": 120.0,
+        "maximum": 225.0,
+        "project_type": "hourly",
+        "name": "Moderate"
+      },
+      {
+        "currency_id": 14,
+        "minimum": 140.0,
+        "maximum": 450.0,
+        "project_type": "fixed",
+        "name": "Micro Project"
+      },
+      {
+        "currency_id": 14,
+        "minimum": 225.0,
+        "maximum": 375.0,
+        "project_type": "hourly",
+        "name": "Standard"
+      },
+      {
+        "currency_id": 14,
+        "minimum": 375.0,
+        "maximum": 750.0,
+        "project_type": "hourly",
+        "name": "Skilled"
+      },
+      {
+        "currency_id": 14,
+        "minimum": 450.0,
+        "maximum": 3750.0,
+        "project_type": "fixed",
+        "name": "Simple Project"
+      },
+      {
+        "currency_id": 14,
+        "minimum": 750.0,
+        "maximum": null,
+        "project_type": "hourly",
+        "name": "Expert"
+      },
+      {
+        "currency_id": 14,
+        "minimum": 3750.0,
+        "maximum": 11250.0,
+        "project_type": "fixed",
+        "name": "Very Small Project"
+      },
+      {
+        "currency_id": 14,
+        "minimum": 11250.0,
+        "maximum": 22500.0,
+        "project_type": "fixed",
+        "name": "Small Project"
+      },
+      {
+        "currency_id": 14,
+        "minimum": 22500.0,
+        "maximum": 45000.0,
+        "project_type": "fixed",
+        "name": "Medium Project"
+      },
+      {
+        "currency_id": 14,
+        "minimum": 45000.0,
+        "maximum": 75000.0,
+        "project_type": "fixed",
+        "name": "Large Project"
+      },
+      {
+        "currency_id": 14,
+        "minimum": 75000.0,
+        "maximum": 150000.0,
+        "project_type": "fixed",
+        "name": "Larger Project"
+      },
+      {
+        "currency_id": 14,
+        "minimum": 150000.0,
+        "maximum": 300000.0,
+        "project_type": "fixed",
+        "name": "Very Large Project"
+      },
+      {
+        "currency_id": 14,
+        "minimum": 300000.0,
+        "maximum": 750000.0,
+        "project_type": "fixed",
+        "name": "Huge Project"
+      },
+      {
+        "currency_id": 14,
+        "minimum": 750000.0,
+        "maximum": null,
+        "project_type": "fixed",
+        "name": "Major Project"
+      },
+      {
+        "currency_id": 15,
+        "minimum": 20000.0,
+        "maximum": 80000.0,
+        "project_type": "hourly",
+        "name": "Basic"
+      },
+      {
+        "currency_id": 15,
+        "minimum": 80000.0,
+        "maximum": 150000.0,
+        "project_type": "hourly",
+        "name": "Moderate"
+      },
+      {
+        "currency_id": 15,
+        "minimum": 100000.0,
+        "maximum": 300000.0,
+        "project_type": "fixed",
+        "name": "Micro Project"
+      },
+      {
+        "currency_id": 15,
+        "minimum": 150000.0,
+        "maximum": 250000.0,
+        "project_type": "hourly",
+        "name": "Standard"
+      },
+      {
+        "currency_id": 15,
+        "minimum": 250000.0,
+        "maximum": 500000.0,
+        "project_type": "hourly",
+        "name": "Skilled"
+      },
+      {
+        "currency_id": 15,
+        "minimum": 300000.0,
+        "maximum": 2500000.0,
+        "project_type": "fixed",
+        "name": "Simple Project"
+      },
+      {
+        "currency_id": 15,
+        "minimum": 500000.0,
+        "maximum": null,
+        "project_type": "hourly",
+        "name": "Expert"
+      },
+      {
+        "currency_id": 15,
+        "minimum": 2500000.0,
+        "maximum": 7500000.0,
+        "project_type": "fixed",
+        "name": "Very Small Project"
+      },
+      {
+        "currency_id": 15,
+        "minimum": 7500000.0,
+        "maximum": 15000000.0,
+        "project_type": "fixed",
+        "name": "Small Project"
+      },
+      {
+        "currency_id": 15,
+        "minimum": 15000000.0,
+        "maximum": 30000000.0,
+        "project_type": "fixed",
+        "name": "Medium Project"
+      },
+      {
+        "currency_id": 15,
+        "minimum": 30000000.0,
+        "maximum": 50000000.0,
+        "project_type": "fixed",
+        "name": "Large Project"
+      },
+      {
+        "currency_id": 15,
+        "minimum": 50000000.0,
+        "maximum": 100000000.0,
+        "project_type": "fixed",
+        "name": "Larger Project"
+      },
+      {
+        "currency_id": 15,
+        "minimum": 100000000.0,
+        "maximum": 200000000.0,
+        "project_type": "fixed",
+        "name": "Very Large Project"
+      },
+      {
+        "currency_id": 15,
+        "minimum": 200000000.0,
+        "maximum": 500000000.0,
+        "project_type": "fixed",
+        "name": "Huge Project"
+      },
+      {
+        "currency_id": 15,
+        "minimum": 500000000.0,
+        "maximum": null,
+        "project_type": "fixed",
+        "name": "Major Project"
+      },
+      {
+        "currency_id": 16,
+        "minimum": 7.0,
+        "maximum": 26.0,
+        "project_type": "hourly",
+        "name": "Basic"
+      },
+      {
+        "currency_id": 16,
+        "minimum": 26.0,
+        "maximum": 50.0,
+        "project_type": "hourly",
+        "name": "Moderate"
+      },
+      {
+        "currency_id": 16,
+        "minimum": 32.0,
+        "maximum": 99.0,
+        "project_type": "fixed",
+        "name": "Micro Project"
+      },
+      {
+        "currency_id": 16,
+        "minimum": 50.0,
+        "maximum": 82.0,
+        "project_type": "hourly",
+        "name": "Standard"
+      },
+      {
+        "currency_id": 16,
+        "minimum": 82.0,
+        "maximum": 165.0,
+        "project_type": "hourly",
+        "name": "Skilled"
+      },
+      {
+        "currency_id": 16,
+        "minimum": 99.0,
+        "maximum": 825.0,
+        "project_type": "fixed",
+        "name": "Simple Project"
+      },
+      {
+        "currency_id": 16,
+        "minimum": 165.0,
+        "maximum": null,
+        "project_type": "hourly",
+        "name": "Expert"
+      },
+      {
+        "currency_id": 16,
+        "minimum": 825.0,
+        "maximum": 2475.0,
+        "project_type": "fixed",
+        "name": "Very Small Project"
+      },
+      {
+        "currency_id": 16,
+        "minimum": 2475.0,
+        "maximum": 4950.0,
+        "project_type": "fixed",
+        "name": "Small Project"
+      },
+      {
+        "currency_id": 16,
+        "minimum": 4950.0,
+        "maximum": 9900.0,
+        "project_type": "fixed",
+        "name": "Medium Project"
+      },
+      {
+        "currency_id": 16,
+        "minimum": 9900.0,
+        "maximum": 16500.0,
+        "project_type": "fixed",
+        "name": "Large Project"
+      },
+      {
+        "currency_id": 16,
+        "minimum": 16500.0,
+        "maximum": 35000.0,
+        "project_type": "fixed",
+        "name": "Larger Project"
+      },
+      {
+        "currency_id": 16,
+        "minimum": 35000.0,
+        "maximum": 70000.0,
+        "project_type": "fixed",
+        "name": "Very Large Project"
+      },
+      {
+        "currency_id": 16,
+        "minimum": 70000.0,
+        "maximum": 200000.0,
+        "project_type": "fixed",
+        "name": "Huge Project"
+      },
+      {
+        "currency_id": 16,
+        "minimum": 200000.0,
+        "maximum": null,
+        "project_type": "fixed",
+        "name": "Major Project"
+      },
+      {
+        "currency_id": 17,
+        "minimum": 13.0,
+        "maximum": 51.0,
+        "project_type": "hourly",
+        "name": "Basic"
+      },
+      {
+        "currency_id": 17,
+        "minimum": 51.0,
+        "maximum": 96.0,
+        "project_type": "hourly",
+        "name": "Moderate"
+      },
+      {
+        "currency_id": 17,
+        "minimum": 70.0,
+        "maximum": 192.0,
+        "project_type": "fixed",
+        "name": "Micro Project"
+      },
+      {
+        "currency_id": 17,
+        "minimum": 96.0,
+        "maximum": 160.0,
+        "project_type": "hourly",
+        "name": "Standard"
+      },
+      {
+        "currency_id": 17,
+        "minimum": 160.0,
+        "maximum": 320.0,
+        "project_type": "hourly",
+        "name": "Skilled"
+      },
+      {
+        "currency_id": 17,
+        "minimum": 192.0,
+        "maximum": 1600.0,
+        "project_type": "fixed",
+        "name": "Simple Project"
+      },
+      {
+        "currency_id": 17,
+        "minimum": 320.0,
+        "maximum": null,
+        "project_type": "hourly",
+        "name": "Expert"
+      },
+      {
+        "currency_id": 17,
+        "minimum": 1600.0,
+        "maximum": 4800.0,
+        "project_type": "fixed",
+        "name": "Very Small Project"
+      },
+      {
+        "currency_id": 17,
+        "minimum": 4800.0,
+        "maximum": 9600.0,
+        "project_type": "fixed",
+        "name": "Small Project"
+      },
+      {
+        "currency_id": 17,
+        "minimum": 9600.0,
+        "maximum": 19200.0,
+        "project_type": "fixed",
+        "name": "Medium Project"
+      },
+      {
+        "currency_id": 17,
+        "minimum": 19200.0,
+        "maximum": 32000.0,
+        "project_type": "fixed",
+        "name": "Large Project"
+      },
+      {
+        "currency_id": 17,
+        "minimum": 32000.0,
+        "maximum": 70000.0,
+        "project_type": "fixed",
+        "name": "Larger Project"
+      },
+      {
+        "currency_id": 17,
+        "minimum": 70000.0,
+        "maximum": 150000.0,
+        "project_type": "fixed",
+        "name": "Very Large Project"
+      },
+      {
+        "currency_id": 17,
+        "minimum": 150000.0,
+        "maximum": 350000.0,
+        "project_type": "fixed",
+        "name": "Huge Project"
+      },
+      {
+        "currency_id": 17,
+        "minimum": 350000.0,
+        "maximum": null,
+        "project_type": "fixed",
+        "name": "Major Project"
+      },
+      {
+        "currency_id": 18,
+        "minimum": 8.0,
+        "maximum": 10.0,
+        "project_type": "fixed",
+        "name": "Basic"
+      },
+      {
+        "currency_id": 18,
+        "minimum": 8.0,
+        "maximum": 11.0,
+        "project_type": "hourly",
+        "name": "Basic"
+      },
+      {
+        "currency_id": 18,
+        "minimum": 200.0,
+        "maximum": 800.0,
+        "project_type": "hourly",
+        "name": "Basic"
+      },
+      {
+        "currency_id": 18,
+        "minimum": 800.0,
+        "maximum": 1500.0,
+        "project_type": "hourly",
+        "name": "Moderate"
+      },
+      {
+        "currency_id": 18,
+        "minimum": 1000.0,
+        "maximum": 3000.0,
+        "project_type": "fixed",
+        "name": "Micro Project"
+      },
+      {
+        "currency_id": 18,
+        "minimum": 1500.0,
+        "maximum": 2500.0,
+        "project_type": "hourly",
+        "name": "Standard"
+      },
+      {
+        "currency_id": 18,
+        "minimum": 2500.0,
+        "maximum": 5000.0,
+        "project_type": "hourly",
+        "name": "Skilled"
+      },
+      {
+        "currency_id": 18,
+        "minimum": 3000.0,
+        "maximum": 25000.0,
+        "project_type": "fixed",
+        "name": "Simple Project"
+      },
+      {
+        "currency_id": 18,
+        "minimum": 5000.0,
+        "maximum": null,
+        "project_type": "hourly",
+        "name": "Expert"
+      },
+      {
+        "currency_id": 18,
+        "minimum": 25000.0,
+        "maximum": 75000.0,
+        "project_type": "fixed",
+        "name": "Very Small Project"
+      },
+      {
+        "currency_id": 18,
+        "minimum": 75000.0,
+        "maximum": 150000.0,
+        "project_type": "fixed",
+        "name": "Small Project"
+      },
+      {
+        "currency_id": 18,
+        "minimum": 150000.0,
+        "maximum": 300000.0,
+        "project_type": "fixed",
+        "name": "Medium Project"
+      },
+      {
+        "currency_id": 18,
+        "minimum": 300000.0,
+        "maximum": 500000.0,
+        "project_type": "fixed",
+        "name": "Large Project"
+      },
+      {
+        "currency_id": 18,
+        "minimum": 500000.0,
+        "maximum": 1000000.0,
+        "project_type": "fixed",
+        "name": "Larger Project"
+      },
+      {
+        "currency_id": 18,
+        "minimum": 1000000.0,
+        "maximum": 2000000.0,
+        "project_type": "fixed",
+        "name": "Very Large Project"
+      },
+      {
+        "currency_id": 18,
+        "minimum": 2000000.0,
+        "maximum": 5000000.0,
+        "project_type": "fixed",
+        "name": "Huge Project"
+      },
+      {
+        "currency_id": 18,
+        "minimum": 5000000.0,
+        "maximum": null,
+        "project_type": "fixed",
+        "name": "Major Project"
+      },
+      {
+        "currency_id": 19,
+        "minimum": 6.0,
+        "maximum": 24.0,
+        "project_type": "hourly",
+        "name": "Basic"
+      },
+      {
+        "currency_id": 19,
+        "minimum": 24.0,
+        "maximum": 45.0,
+        "project_type": "hourly",
+        "name": "Moderate"
+      },
+      {
+        "currency_id": 19,
+        "minimum": 30.0,
+        "maximum": 90.0,
+        "project_type": "fixed",
+        "name": "Micro Project"
+      },
+      {
+        "currency_id": 19,
+        "minimum": 45.0,
+        "maximum": 75.0,
+        "project_type": "hourly",
+        "name": "Standard"
+      },
+      {
+        "currency_id": 19,
+        "minimum": 75.0,
+        "maximum": 150.0,
+        "project_type": "hourly",
+        "name": "Skilled"
+      },
+      {
+        "currency_id": 19,
+        "minimum": 90.0,
+        "maximum": 750.0,
+        "project_type": "fixed",
+        "name": "Simple Project"
+      },
+      {
+        "currency_id": 19,
+        "minimum": 150.0,
+        "maximum": null,
+        "project_type": "hourly",
+        "name": "Expert"
+      },
+      {
+        "currency_id": 19,
+        "minimum": 750.0,
+        "maximum": 2250.0,
+        "project_type": "fixed",
+        "name": "Very Small Project"
+      },
+      {
+        "currency_id": 19,
+        "minimum": 2250.0,
+        "maximum": 4500.0,
+        "project_type": "fixed",
+        "name": "Small Project"
+      },
+      {
+        "currency_id": 19,
+        "minimum": 4500.0,
+        "maximum": 9000.0,
+        "project_type": "fixed",
+        "name": "Medium Project"
+      },
+      {
+        "currency_id": 19,
+        "minimum": 9000.0,
+        "maximum": 15000.0,
+        "project_type": "fixed",
+        "name": "Large Project"
+      },
+      {
+        "currency_id": 19,
+        "minimum": 15000.0,
+        "maximum": 30000.0,
+        "project_type": "fixed",
+        "name": "Larger Project"
+      },
+      {
+        "currency_id": 19,
+        "minimum": 30000.0,
+        "maximum": 60000.0,
+        "project_type": "fixed",
+        "name": "Very Large Project"
+      },
+      {
+        "currency_id": 19,
+        "minimum": 60000.0,
+        "maximum": 150000.0,
+        "project_type": "fixed",
+        "name": "Huge Project"
+      },
+      {
+        "currency_id": 19,
+        "minimum": 150000.0,
+        "maximum": null,
+        "project_type": "fixed",
+        "name": "Major Project"
+      },
+      {
+        "currency_id": 20,
+        "minimum": 5.0,
+        "maximum": 20.0,
+        "project_type": "hourly",
+        "name": "Basic"
+      },
+      {
+        "currency_id": 20,
+        "minimum": 20.0,
+        "maximum": 38.0,
+        "project_type": "hourly",
+        "name": "Moderate"
+      },
+      {
+        "currency_id": 20,
+        "minimum": 25.0,
+        "maximum": 75.0,
+        "project_type": "fixed",
+        "name": "Micro Project"
+      },
+      {
+        "currency_id": 20,
+        "minimum": 38.0,
+        "maximum": 62.0,
+        "project_type": "hourly",
+        "name": "Standard"
+      },
+      {
+        "currency_id": 20,
+        "minimum": 62.0,
+        "maximum": 125.0,
+        "project_type": "hourly",
+        "name": "Skilled"
+      },
+      {
+        "currency_id": 20,
+        "minimum": 75.0,
+        "maximum": 625.0,
+        "project_type": "fixed",
+        "name": "Simple Project"
+      },
+      {
+        "currency_id": 20,
+        "minimum": 125.0,
+        "maximum": null,
+        "project_type": "hourly",
+        "name": "Expert"
+      },
+      {
+        "currency_id": 20,
+        "minimum": 625.0,
+        "maximum": 1875.0,
+        "project_type": "fixed",
+        "name": "Very Small Project"
+      },
+      {
+        "currency_id": 20,
+        "minimum": 1875.0,
+        "maximum": 3750.0,
+        "project_type": "fixed",
+        "name": "Small Project"
+      },
+      {
+        "currency_id": 20,
+        "minimum": 3750.0,
+        "maximum": 7500.0,
+        "project_type": "fixed",
+        "name": "Medium Project"
+      },
+      {
+        "currency_id": 20,
+        "minimum": 7500.0,
+        "maximum": 12500.0,
+        "project_type": "fixed",
+        "name": "Large Project"
+      },
+      {
+        "currency_id": 20,
+        "minimum": 12500.0,
+        "maximum": null,
+        "project_type": "fixed",
+        "name": "Larger Project"
+      },
+      {
+        "currency_id": 21,
+        "minimum": 50.0,
+        "maximum": 200.0,
+        "project_type": "hourly",
+        "name": "Basic"
+      },
+      {
+        "currency_id": 21,
+        "minimum": 200.0,
+        "maximum": 375.0,
+        "project_type": "hourly",
+        "name": "Moderate"
+      },
+      {
+        "currency_id": 21,
+        "minimum": 250.0,
+        "maximum": 750.0,
+        "project_type": "fixed",
+        "name": "Micro Project"
+      },
+      {
+        "currency_id": 21,
+        "minimum": 375.0,
+        "maximum": 625.0,
+        "project_type": "hourly",
+        "name": "Standard"
+      },
+      {
+        "currency_id": 21,
+        "minimum": 625.0,
+        "maximum": 1250.0,
+        "project_type": "hourly",
+        "name": "Skilled"
+      },
+      {
+        "currency_id": 21,
+        "minimum": 750.0,
+        "maximum": 6250.0,
+        "project_type": "fixed",
+        "name": "Simple Project"
+      },
+      {
+        "currency_id": 21,
+        "minimum": 1250.0,
+        "maximum": null,
+        "project_type": "hourly",
+        "name": "Expert"
+      },
+      {
+        "currency_id": 21,
+        "minimum": 6250.0,
+        "maximum": 18750.0,
+        "project_type": "fixed",
+        "name": "Very Small Project"
+      },
+      {
+        "currency_id": 21,
+        "minimum": 18750.0,
+        "maximum": 37500.0,
+        "project_type": "fixed",
+        "name": "Small Project"
+      },
+      {
+        "currency_id": 21,
+        "minimum": 37500.0,
+        "maximum": 75000.0,
+        "project_type": "fixed",
+        "name": "Medium Project"
+      },
+      {
+        "currency_id": 21,
+        "minimum": 75000.0,
+        "maximum": 125000.0,
+        "project_type": "fixed",
+        "name": "Large Project"
+      },
+      {
+        "currency_id": 21,
+        "minimum": 125000.0,
+        "maximum": null,
+        "project_type": "fixed",
+        "name": "Larger Project"
+      },
+      {
+        "currency_id": 22,
+        "minimum": 13.0,
+        "maximum": 52.0,
+        "project_type": "hourly",
+        "name": "Basic"
+      },
+      {
+        "currency_id": 22,
+        "minimum": 52.0,
+        "maximum": 98.0,
+        "project_type": "hourly",
+        "name": "Moderate"
+      },
+      {
+        "currency_id": 22,
+        "minimum": 65.0,
+        "maximum": 195.0,
+        "project_type": "fixed",
+        "name": "Micro Project"
+      },
+      {
+        "currency_id": 22,
+        "minimum": 98.0,
+        "maximum": 162.0,
+        "project_type": "hourly",
+        "name": "Standard"
+      },
+      {
+        "currency_id": 22,
+        "minimum": 162.0,
+        "maximum": 325.0,
+        "project_type": "hourly",
+        "name": "Skilled"
+      },
+      {
+        "currency_id": 22,
+        "minimum": 195.0,
+        "maximum": 1625.0,
+        "project_type": "fixed",
+        "name": "Simple Project"
+      },
+      {
+        "currency_id": 22,
+        "minimum": 325.0,
+        "maximum": null,
+        "project_type": "hourly",
+        "name": "Expert"
+      },
+      {
+        "currency_id": 22,
+        "minimum": 1625.0,
+        "maximum": 4875.0,
+        "project_type": "fixed",
+        "name": "Very Small Project"
+      },
+      {
+        "currency_id": 22,
+        "minimum": 4875.0,
+        "maximum": 9750.0,
+        "project_type": "fixed",
+        "name": "Small Project"
+      },
+      {
+        "currency_id": 22,
+        "minimum": 9750.0,
+        "maximum": 19500.0,
+        "project_type": "fixed",
+        "name": "Medium Project"
+      },
+      {
+        "currency_id": 22,
+        "minimum": 19500.0,
+        "maximum": 32500.0,
+        "project_type": "fixed",
+        "name": "Large Project"
+      },
+      {
+        "currency_id": 22,
+        "minimum": 32500.0,
+        "maximum": null,
+        "project_type": "fixed",
+        "name": "Larger Project"
+      },
+      {
+        "currency_id": 23,
+        "minimum": 40000.0,
+        "maximum": 200000.0,
+        "project_type": "hourly",
+        "name": "Basic"
+      },
+      {
+        "currency_id": 23,
+        "minimum": 200000.0,
+        "maximum": 350000.0,
+        "project_type": "hourly",
+        "name": "Moderate"
+      },
+      {
+        "currency_id": 23,
+        "minimum": 200000.0,
+        "maximum": 700000.0,
+        "project_type": "fixed",
+        "name": "Micro Project"
+      },
+      {
+        "currency_id": 23,
+        "minimum": 350000.0,
+        "maximum": 550000.0,
+        "project_type": "hourly",
+        "name": "Standard"
+      },
+      {
+        "currency_id": 23,
+        "minimum": 550000.0,
+        "maximum": 1000000.0,
+        "project_type": "hourly",
+        "name": "Skilled"
+      },
+      {
+        "currency_id": 23,
+        "minimum": 700000.0,
+        "maximum": 5500000.0,
+        "project_type": "fixed",
+        "name": "Simple project"
+      },
+      {
+        "currency_id": 23,
+        "minimum": 1000000.0,
+        "maximum": null,
+        "project_type": "hourly",
+        "name": "Expert"
+      },
+      {
+        "currency_id": 23,
+        "minimum": 5500000.0,
+        "maximum": 16000000.0,
+        "project_type": "fixed",
+        "name": "Very small project"
+      },
+      {
+        "currency_id": 23,
+        "minimum": 16000000.0,
+        "maximum": 35000000.0,
+        "project_type": "fixed",
+        "name": "Small project"
+      },
+      {
+        "currency_id": 23,
+        "minimum": 35000000.0,
+        "maximum": 70000000.0,
+        "project_type": "fixed",
+        "name": "Medium project"
+      },
+      {
+        "currency_id": 23,
+        "minimum": 70000000.0,
+        "maximum": 100000000.0,
+        "project_type": "fixed",
+        "name": "Large project"
+      },
+      {
+        "currency_id": 23,
+        "minimum": 100000000.0,
+        "maximum": 200000000.0,
+        "project_type": "fixed",
+        "name": "Larger project"
+      },
+      {
+        "currency_id": 23,
+        "minimum": 200000000.0,
+        "maximum": 450000000.0,
+        "project_type": "fixed",
+        "name": "Very Large project"
+      },
+      {
+        "currency_id": 23,
+        "minimum": 450000000.0,
+        "maximum": 1000000000.0,
+        "project_type": "fixed",
+        "name": "Huge project"
+      },
+      {
+        "currency_id": 23,
+        "minimum": 1000000000.0,
+        "maximum": null,
+        "project_type": "fixed",
+        "name": "Major project"
+      },
+      {
+        "currency_id": 24,
+        "minimum": 80.0,
+        "maximum": 320.0,
+        "project_type": "hourly",
+        "name": "Basic"
+      },
+      {
+        "currency_id": 24,
+        "minimum": 320.0,
+        "maximum": 600.0,
+        "project_type": "hourly",
+        "name": "Moderate"
+      },
+      {
+        "currency_id": 24,
+        "minimum": 400.0,
+        "maximum": 1200.0,
+        "project_type": "fixed",
+        "name": "Micro Project"
+      },
+      {
+        "currency_id": 24,
+        "minimum": 600.0,
+        "maximum": 1000.0,
+        "project_type": "hourly",
+        "name": "Standard"
+      },
+      {
+        "currency_id": 24,
+        "minimum": 1000.0,
+        "maximum": 2000.0,
+        "project_type": "hourly",
+        "name": "Skilled"
+      },
+      {
+        "currency_id": 24,
+        "minimum": 1200.0,
+        "maximum": 10000.0,
+        "project_type": "fixed",
+        "name": "Simple Project"
+      },
+      {
+        "currency_id": 24,
+        "minimum": 2000.0,
+        "maximum": null,
+        "project_type": "hourly",
+        "name": "Expert"
+      },
+      {
+        "currency_id": 24,
+        "minimum": 10000.0,
+        "maximum": 30000.0,
+        "project_type": "fixed",
+        "name": "Very Small Project"
+      },
+      {
+        "currency_id": 24,
+        "minimum": 30000.0,
+        "maximum": 60000.0,
+        "project_type": "fixed",
+        "name": "Small Project"
+      },
+      {
+        "currency_id": 24,
+        "minimum": 60000.0,
+        "maximum": 120000.0,
+        "project_type": "fixed",
+        "name": "Medium Project"
+      },
+      {
+        "currency_id": 24,
+        "minimum": 120000.0,
+        "maximum": 200000.0,
+        "project_type": "fixed",
+        "name": "Large Project"
+      },
+      {
+        "currency_id": 24,
+        "minimum": 200000.0,
+        "maximum": null,
+        "project_type": "fixed",
+        "name": "Larger Project"
+      },
+      {
+        "currency_id": 25,
+        "minimum": 16.0,
+        "maximum": 65.0,
+        "project_type": "hourly",
+        "name": "Basic"
+      },
+      {
+        "currency_id": 25,
+        "minimum": 65.0,
+        "maximum": 115.0,
+        "project_type": "hourly",
+        "name": "Moderate"
+      },
+      {
+        "currency_id": 25,
+        "minimum": 80.0,
+        "maximum": 240.0,
+        "project_type": "fixed",
+        "name": "Micro Project"
+      },
+      {
+        "currency_id": 25,
+        "minimum": 115.0,
+        "maximum": 200.0,
+        "project_type": "hourly",
+        "name": "Standard"
+      },
+      {
+        "currency_id": 25,
+        "minimum": 200.0,
+        "maximum": 400.0,
+        "project_type": "hourly",
+        "name": "Skilled"
+      },
+      {
+        "currency_id": 25,
+        "minimum": 240.0,
+        "maximum": 2000.0,
+        "project_type": "fixed",
+        "name": "Simple Project"
+      },
+      {
+        "currency_id": 25,
+        "minimum": 400.0,
+        "maximum": null,
+        "project_type": "hourly",
+        "name": "Expert"
+      },
+      {
+        "currency_id": 25,
+        "minimum": 2000.0,
+        "maximum": 6000.0,
+        "project_type": "fixed",
+        "name": "Very Small Project"
+      },
+      {
+        "currency_id": 25,
+        "minimum": 6000.0,
+        "maximum": 12000.0,
+        "project_type": "fixed",
+        "name": "Small Project"
+      },
+      {
+        "currency_id": 25,
+        "minimum": 12000.0,
+        "maximum": 24000.0,
+        "project_type": "fixed",
+        "name": "Medium Project"
+      },
+      {
+        "currency_id": 25,
+        "minimum": 24000.0,
+        "maximum": 40000.0,
+        "project_type": "fixed",
+        "name": "Large Project"
+      },
+      {
+        "currency_id": 25,
+        "minimum": 40000.0,
+        "maximum": 80000.0,
+        "project_type": "fixed",
+        "name": "Larger Project"
+      },
+      {
+        "currency_id": 25,
+        "minimum": 80000.0,
+        "maximum": 160000.0,
+        "project_type": "fixed",
+        "name": "Very Large Project"
+      },
+      {
+        "currency_id": 25,
+        "minimum": 160000.0,
+        "maximum": 400000.0,
+        "project_type": "fixed",
+        "name": "Huge Project"
+      },
+      {
+        "currency_id": 25,
+        "minimum": 400000.0,
+        "maximum": null,
+        "project_type": "fixed",
+        "name": "Major Project"
+      },
+      {
+        "currency_id": 32,
+        "minimum": 30.0,
+        "maximum": 120.0,
+        "project_type": "hourly",
+        "name": "Basic"
+      },
+      {
+        "currency_id": 32,
+        "minimum": 120.0,
+        "maximum": 240.0,
+        "project_type": "hourly",
+        "name": "Moderate"
+      },
+      {
+        "currency_id": 32,
+        "minimum": 150.0,
+        "maximum": 450.0,
+        "project_type": "fixed",
+        "name": "Micro Project"
+      },
+      {
+        "currency_id": 32,
+        "minimum": 240.0,
+        "maximum": 400.0,
+        "project_type": "hourly",
+        "name": "Standard"
+      },
+      {
+        "currency_id": 32,
+        "minimum": 400.0,
+        "maximum": 800.0,
+        "project_type": "hourly",
+        "name": "Skilled"
+      },
+      {
+        "currency_id": 32,
+        "minimum": 450.0,
+        "maximum": 4000.0,
+        "project_type": "fixed",
+        "name": "Simple project"
+      },
+      {
+        "currency_id": 32,
+        "minimum": 800.0,
+        "maximum": null,
+        "project_type": "hourly",
+        "name": "Expert"
+      },
+      {
+        "currency_id": 32,
+        "minimum": 4000.0,
+        "maximum": 12000.0,
+        "project_type": "fixed",
+        "name": "Very small project"
+      },
+      {
+        "currency_id": 32,
+        "minimum": 12000.0,
+        "maximum": 24000.0,
+        "project_type": "fixed",
+        "name": "Small project"
+      },
+      {
+        "currency_id": 32,
+        "minimum": 24000.0,
+        "maximum": 48000.0,
+        "project_type": "fixed",
+        "name": "Medium project"
+      },
+      {
+        "currency_id": 32,
+        "minimum": 48000.0,
+        "maximum": 80000.0,
+        "project_type": "fixed",
+        "name": "Large project"
+      },
+      {
+        "currency_id": 32,
+        "minimum": 80000.0,
+        "maximum": 160000.0,
+        "project_type": "fixed",
+        "name": "Larger project"
+      },
+      {
+        "currency_id": 32,
+        "minimum": 160000.0,
+        "maximum": 320000.0,
+        "project_type": "fixed",
+        "name": "Very Large project"
+      },
+      {
+        "currency_id": 32,
+        "minimum": 320000.0,
+        "maximum": 800000.0,
+        "project_type": "fixed",
+        "name": "Huge project"
+      },
+      {
+        "currency_id": 32,
+        "minimum": 800000.0,
+        "maximum": null,
+        "project_type": "fixed",
+        "name": "Major project"
+      }
+    ]
+  },
+  "request_id": "5eca7e921911964b25a0259df9f3f086"
+}
