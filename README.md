@@ -21,14 +21,8 @@ Add twitter dependency to your build.gradle:
 //In the root build.gradle file
 allprojects {
     repositories {
-        google()
+        //ensure you have this line in you repositories for all projects
         jcenter()
-        
-        //Add this block
-        //IMPORTANT! : this will soon change to jcentre, in the future if the dependency cannot be resolved please ensure you have the jcentre() line above in your root gradle file
-        maven {
-            url  "https://dl.bintray.com/freelancer/freelance-sdk-android"
-        }
     }
 }
 
