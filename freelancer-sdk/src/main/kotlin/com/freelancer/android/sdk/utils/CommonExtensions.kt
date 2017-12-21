@@ -1,6 +1,6 @@
 package com.freelancer.android.sdk.utils
 
-fun Boolean?.getInt(): Int {
+internal fun Boolean?.getInt(): Int {
     if (this == null || !this) {
         return 0
     } else {
@@ -8,7 +8,7 @@ fun Boolean?.getInt(): Int {
     }
 }
 
-fun String.join(tokens: Iterable<*>): String {
+internal fun String.join(tokens: Iterable<*>): String {
     val sb = StringBuilder()
     var firstTime = true
     for (token in tokens) {

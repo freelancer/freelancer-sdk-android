@@ -40,10 +40,7 @@ data class ThreadInfo(
 
     enum class ThreadType {
         PRIVATE_CHAT,
-        GROUP,
-        PCB,
-        PRIMARY,
-        SUPPORT_CHAT;
+        PRIMARY;
 
         override fun toString(): String = name.toLowerCase()
     }
