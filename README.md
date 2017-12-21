@@ -5,7 +5,7 @@ The Freelancer sdk aims to make using the the Freelancer.com API as easy as poss
 
 ## Freelancer sdk features
 
-* Easy access to accounts.freelancer.com for OAuth to the Feelancer.com API
+* Easy access to accounts.freelancer.com for OAuth to the Freelancer.com API
 * Containts models for all json response
 * Access the Freelancer.com API
 
