@@ -12,11 +12,11 @@ The Freelancer sdk aims to make using the the Freelancer.com API as easy as poss
 ## Getting Started
 
 * Create a new client application on the [Freelancer.com developer portal](https://accounts.freelancer.com/settings/develop)
-* Install Freelancer andrdoi sdk using the instructions below.
+* Install Freelancer android sdk using the instructions below.
 
 ### Install using Bintray JCenter
 
-Add twitter dependency to your build.gradle:
+Add freelancer dependency to your build.gradle:
 ```groovy
 //In the root build.gradle file
 allprojects {
