@@ -1,6 +1,7 @@
 package com.freelancer.android.sdk.endpoints
 
 import com.freelancer.android.sdk.models.MessageThread
+import com.freelancer.android.sdk.models.request.ClientMessageIdRequest
 import com.freelancer.android.sdk.models.request.ContextTypeRequest
 import com.freelancer.android.sdk.models.request.FilesRequest
 import com.freelancer.android.sdk.models.request.MembersRequest
@@ -9,8 +10,6 @@ import com.freelancer.android.sdk.models.request.ThreadContextRequest
 import com.freelancer.android.sdk.models.request.TypeRequest
 import com.freelancer.android.sdk.models.response.ApiResponse
 import com.freelancer.android.sdk.models.response.ThreadsResponse
-import okhttp3.MultipartBody
-import okhttp3.RequestBody
 import retrofit2.http.Field
 import retrofit2.http.FormUrlEncoded
 import retrofit2.http.GET
@@ -58,37 +57,55 @@ interface ThreadsApi {
             @Query("limit") limit: Int)
             : Observable<ThreadsResponse>
 
-    /**
-     * TODO
-     *
-     * add endpoint to get thread by id
-     * /messages/0.1/threads/{thread_id}
-     */
+    @GET("threads/{thread_id}")
+    fun getThreadById(@Path("thread_id") threadId: Long,
+            @Query("message_count") messageCount: Boolean = true,
+            @Query("unread_count") unreadCount: Boolean = true,
+            @Query("last_message") lastMessage: Boolean = true,
+            @Query("user_details") userDetails: Boolean = true,
+            @Query("context_details") contextDetails: Boolean = true,
+            @Query("thread_attachments") threadAttachments: Boolean = true)
+            : Observable<ThreadsResponse>
 
     @FormUrlEncoded
     @PUT("threads/")
     fun update(@Field("threads[]") threadId: Long,
-            @Field("action") action: String): Observable<ApiResponse>
+            @Field("action") action: String,
+            @Query("folders[]") folders: List<Long>? = null,
+            @Query("target") target: String? = null,
+            @Query("thread_types[]") threadTypes: List<String>? = null,
+            @Query("is_read") is_read: Boolean? = null,
+            @Query("is_muted") is_muted: Boolean? = null,
+            @Query("offset") offset: Int,
+            @Query("limit") limit: Int,
+            @Query("from_updated_time") fromUpdatedTime: Long? = null,
+            @Query("to_updated_time") toUpdatedTime: Long? = null): Observable<ApiResponse>
 
     @POST("threads/{thread_id}/typing/")
     fun notifyTyping(@Path("thread_id") threadId: Long): Observable<ApiResponse>
 
-    /**
-     * TODO
-     *
-     * add endpoint to add remove users
-     * /messages/0.1/threads/{thread_id}/members
-     */
+    @FormUrlEncoded
+    @PUT("threads/{thread_id}/members")
+    fun addOrRemoveUsers(
+            @Path("thread_id") threadId: Long,
+            @Field("members[]") members: List<Long>? = null,
+            @Field("action") action: String? = null): Observable<ApiResponse>
 
     @Multipart
     @POST("threads/{thread_id}/messages/")
-    fun sendMessage(@Path("thread_id") threadId: Long,
-            @Part("message") message: RequestBody?,
-            @Part("client_message_id") clientId: RequestBody?,
-            @Part files: List<MultipartBody.Part>?): Observable<MessageRequest>
+    fun createMessage(@Path("thread_id") threadId: Long,
+            @Part("message") message: MessageRequest?,
+            @Part("client_message_id") clientId: ClientMessageIdRequest?,
+            @Part files: FilesRequest?
+            //TODO -- add attachmetns (different to files)
+            //TODO -- add attachment key
+    ): Observable<MessageRequest>
 
-    @GET("threads/search/?thread_details=true&"
-            + "user_details=true&"
-            + "context_details=true")
-    fun search(@Query("query") query: String): Observable<ThreadsResponse>
+    @GET("threads/search/")
+    fun search(@Query("query") query: String,
+            @Query("thread_details") threadDetails: Boolean = true,
+            @Query("user_details") userDetails: Boolean = true,
+            @Query("context_details") contextDetails: Boolean = true,
+            @Query("offset") offset: Int,
+            @Query("limit") limit: Int): Observable<ThreadsResponse>
 }
