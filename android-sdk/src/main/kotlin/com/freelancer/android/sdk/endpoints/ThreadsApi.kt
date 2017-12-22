@@ -1,34 +1,94 @@
 package com.freelancer.android.sdk.endpoints
 
-import android.content.Context
-import com.freelancer.android.sdk.models.Attachment
 import com.freelancer.android.sdk.models.MessageThread
-import com.freelancer.android.sdk.models.ThreadContext
-import com.freelancer.android.sdk.models.ThreadInfo
-import com.freelancer.android.sdk.utils.toMultipart
-import com.freelancer.android.sdk.utils.toRequestBody
+import com.freelancer.android.sdk.models.request.ContextTypeRequest
+import com.freelancer.android.sdk.models.request.FilesRequest
+import com.freelancer.android.sdk.models.request.MembersRequest
+import com.freelancer.android.sdk.models.request.MessageRequest
+import com.freelancer.android.sdk.models.request.ThreadContextRequest
+import com.freelancer.android.sdk.models.request.TypeRequest
+import com.freelancer.android.sdk.models.response.ApiResponse
+import com.freelancer.android.sdk.models.response.ThreadsResponse
+import okhttp3.MultipartBody
+import okhttp3.RequestBody
+import retrofit2.http.Field
+import retrofit2.http.FormUrlEncoded
+import retrofit2.http.GET
+import retrofit2.http.Multipart
+import retrofit2.http.POST
+import retrofit2.http.PUT
+import retrofit2.http.Part
+import retrofit2.http.Path
+import retrofit2.http.Query
 import rx.Observable
 
-/**
- * Created by arranlomas on 21/12/17.
- */
-class ThreadsApi internal constructor(
-        private val threadsApiRetrofit: ThreadsApiRetrofit,
-        private val threadsCreateApiRetrofit: ThreadsCreateApiRetrofit) {
+interface ThreadsApi {
 
-    fun createThread(members: List<Long>,
-            contextType: ThreadContext.Type,
-            threadContext: Long,
-            message: String,
-            files: List<Attachment>?,
-            type: ThreadInfo.ThreadType,
-            androidContext: Context): Observable<MessageThread> {
+    @Multipart
+    @POST("threads/")
+    fun createThread(@Part("members[]") members: MembersRequest?,
+            @Part("context_type") contextType: ContextTypeRequest?,
+            @Part("context") context: ThreadContextRequest?,
+            @Part("message") message: MessageRequest?,
+            @Part files: FilesRequest?,
+            @Part("thread_type") threadType: TypeRequest): Observable<MessageThread>
 
-        return threadsCreateApiRetrofit.createThread(members.toRequestBody(),
-                contextType.toRequestBody(),
-                threadContext.toRequestBody(),
-                message.toRequestBody(),
-                files?.toMultipart(androidContext),
-                type.toRequestBody())
-    }
+    @GET("threads/")
+    fun getThreads(
+            @Query("threads[]") threadIds: List<Long>? = null,
+            @Query("folders[]") folders: List<Long>? = null,
+            @Query("contexts[]") contexts: List<Long>? = null,
+            @Part("context_type") contextType: String? = null,
+            @Query("members[]") members: List<Long>? = null,
+            @Query("owners[]") owners: List<Long>? = null,
+            @Query("thread_types[]") threadTypes: List<String>? = null,
+            @Query("is_read") is_read: Boolean? = null,
+            @Query("is_muted") is_muted: Boolean? = null,
+            @Query("from_updated_time") fromUpdatedTime: Long? = null,
+            @Query("to_updated_time") toUpdatedTime: Long? = null,
+            @Query("count") count: Boolean? = null,
+            @Query("message_count") messageCount: Boolean = true,
+            @Query("unread_count") unreadCount: Boolean = true,
+            @Query("last_message") lastMessage: Boolean = true,
+            @Query("unread_thread_count") unreadThreadCount: Boolean = true,
+            @Query("user_details") userDetails: Boolean = true,
+            @Query("context_details") contextDetails: Boolean = true,
+            @Query("thread_attachments") threadAttachments: Boolean = true,
+            @Query("offset") offset: Int,
+            @Query("limit") limit: Int)
+            : Observable<ThreadsResponse>
+
+    /**
+     * TODO
+     *
+     * add endpoint to get thread by id
+     * /messages/0.1/threads/{thread_id}
+     */
+
+    @FormUrlEncoded
+    @PUT("threads/")
+    fun update(@Field("threads[]") threadId: Long,
+            @Field("action") action: String): Observable<ApiResponse>
+
+    @POST("threads/{thread_id}/typing/")
+    fun notifyTyping(@Path("thread_id") threadId: Long): Observable<ApiResponse>
+
+    /**
+     * TODO
+     *
+     * add endpoint to add remove users
+     * /messages/0.1/threads/{thread_id}/members
+     */
+
+    @Multipart
+    @POST("threads/{thread_id}/messages/")
+    fun sendMessage(@Path("thread_id") threadId: Long,
+            @Part("message") message: RequestBody?,
+            @Part("client_message_id") clientId: RequestBody?,
+            @Part files: List<MultipartBody.Part>?): Observable<MessageRequest>
+
+    @GET("threads/search/?thread_details=true&"
+            + "user_details=true&"
+            + "context_details=true")
+    fun search(@Query("query") query: String): Observable<ThreadsResponse>
 }

@@ -20,8 +20,6 @@ import com.freelancer.android.sdk.endpoints.ProjectApi
 import com.freelancer.android.sdk.endpoints.ReviewsApi
 import com.freelancer.android.sdk.endpoints.ServicesApi
 import com.freelancer.android.sdk.endpoints.ThreadsApi
-import com.freelancer.android.sdk.endpoints.ThreadsApiRetrofit
-import com.freelancer.android.sdk.endpoints.ThreadsCreateApiRetrofit
 import com.freelancer.android.sdk.endpoints.TimezoneApi
 import com.freelancer.android.sdk.endpoints.UserApi
 import com.freelancer.android.sdk.inteceptors.ApiResponseInterceptor
@@ -69,7 +67,7 @@ class Freelancer(private val authToken: String,
         return getRetrofitApi(BuildConfig.API_PREFIX_PROJECTS, CurrenciesApi::class.java)
     }
 
-   fun createBudgetsApi(): BudgetsApi {
+    fun createBudgetsApi(): BudgetsApi {
         return getRetrofitApi(BuildConfig.API_PREFIX_PROJECTS, BudgetsApi::class.java)
     }
 
@@ -114,9 +112,7 @@ class Freelancer(private val authToken: String,
     }
 
     fun createThreadsApi(): ThreadsApi {
-        val threadsRetrofit = getRetrofitApi(BuildConfig.API_PREFIX_MESSAGES, ThreadsApiRetrofit::class.java)
-        val threadsCreateRetrofit = getRetrofitApi(BuildConfig.API_PREFIX_MESSAGES, ThreadsCreateApiRetrofit::class.java)
-        return ThreadsApi(threadsRetrofit, threadsCreateRetrofit)
+        return getRetrofitApi(BuildConfig.API_PREFIX_MESSAGES, ThreadsApi::class.java)
     }
 
     fun createTimezoneApi(): TimezoneApi {
