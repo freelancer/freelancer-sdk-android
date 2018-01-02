@@ -65,9 +65,9 @@ tasks.withType(Javadoc) {
 }
 
 ext {
-    publishedGroupId = 'com.freelancer.android'
+    publishedGroupId = 'com.freelancer'
     publishedPackaging = 'aar'
-    publishedArtifact = 'freelancer-sdk'
+    publishedArtifact = 'android-sdk'
 
     libraryVersionName = sdkVersionName
     libraryName = 'android-sdk'
