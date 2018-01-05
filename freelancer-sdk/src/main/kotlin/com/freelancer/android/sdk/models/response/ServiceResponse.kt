@@ -11,8 +11,7 @@ data class ServiceListResponse(
 )
 
 data class ServiceListResult(
-        val services: List<Service>,
-        val users: List<Any>
+        val services: List<Service>
 )
 
 data class ServiceOrderResponse(
