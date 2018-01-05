@@ -5,10 +5,10 @@ import java.util.Locale
 
 data class Service(
         @SerializedName("id")
-        val id: Int,
+        val id: Long,
 
         @SerializedName("user_id")
-        val userId: Int,
+        val userId: Long,
 
         @SerializedName("title")
         val title: String,
@@ -20,13 +20,13 @@ data class Service(
         val instructions: String,
 
         @SerializedName("time_submitted")
-        val timeSubmitted: Int,
+        val timeSubmitted: Long,
 
         @SerializedName("time_closed")
-        val timeClosed: Int,
+        val timeClosed: Long,
 
         @SerializedName("base_duration")
-        val baseDuration: Int,
+        val baseDuration: Long,
 
         @SerializedName("base_cost")
         val baseCost: Double,
@@ -47,7 +47,7 @@ data class Service(
         val rating: Double,
 
         @SerializedName("rating_count")
-        val ratingCount: Int,
+        val ratingCount: Long,
 
         @SerializedName("editors_choice")
         val editorsChoice: Boolean

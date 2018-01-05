@@ -6,20 +6,10 @@ import com.freelancer.android.sdk.models.Project
 import com.freelancer.android.sdk.models.Service
 
 data class ServiceListResponse(
-        val status: String,
-        val result: ServiceListResult
-)
-
-data class ServiceListResult(
         val services: List<Service>
 )
 
 data class ServiceOrderResponse(
-        val status: String,
-        val result: ServiceOrderResult
-)
-
-data class ServiceOrderResult(
         val project: Project,
         val bid: Bid,
         val milestones: List<Milestone>
