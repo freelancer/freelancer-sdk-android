@@ -4,6 +4,7 @@ import com.freelancer.android.sdk.models.Service
 import com.freelancer.android.sdk.models.response.ServiceListResponse
 import com.freelancer.android.sdk.models.response.ServiceOrderResponse
 import retrofit2.http.Field
+import retrofit2.http.FormUrlEncoded
 import retrofit2.http.GET
 import retrofit2.http.PUT
 import retrofit2.http.Path
@@ -12,11 +13,12 @@ import rx.Observable
 
 interface ServicesApi {
 
+    @FormUrlEncoded
     @PUT("services/{service_type}/{service_id}/order/")
     fun orderService(
             @Path("service_type") serviceType: Service.Type,
             @Path("service_id") serviceId: Long,
-            @Field("extras") extras: List<Long>
+            @Field("extras") extras: List<Long>? = null
     ): Observable<ServiceOrderResponse>
 
     @GET("services/")

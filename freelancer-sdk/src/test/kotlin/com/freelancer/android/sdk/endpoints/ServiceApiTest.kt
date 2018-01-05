@@ -1,6 +1,8 @@
 package com.freelancer.android.sdk.endpoints
 
+import com.freelancer.android.sdk.models.Service
 import com.freelancer.android.sdk.models.response.ServiceListResponse
+import com.freelancer.android.sdk.models.response.ServiceOrderResponse
 import junit.framework.Assert.assertEquals
 import junit.framework.Assert.assertTrue
 import org.junit.Before
@@ -35,7 +37,7 @@ internal class ServiceApiTest : BaseApiTest() {
             assertEquals("Compose a 30-second soundtrack", it.services[0].title)
         }
     }
-    
+
     @Test
     fun getServicesById() {
         server.enqueue(createMockResponse(readFromFile("get_services_by_id.json")))
@@ -53,6 +55,25 @@ internal class ServiceApiTest : BaseApiTest() {
             assertTrue(it.services.isNotEmpty())
 
             assertEquals("Create a Caricature", it.services[0].title)
+        }
+    }
+
+
+    @Test
+    fun orderService() {
+        server.enqueue(createMockResponse(readFromFile("order_service.json")))
+
+        val subscriber = TestSubscriber<ServiceOrderResponse>()
+
+        servicesApi.orderService(Service.Type.REGULAR, 56758L).subscribe(subscriber)
+
+        subscriber.assertCompleted()
+        subscriber.awaitTerminalEvent()
+        subscriber.assertCompleted()
+        subscriber.assertNoErrors()
+        subscriber.assertValueCount(1)
+        subscriber.onNextEvents.first().let {
+            assertEquals("Remove background from a photo for cwliu", it.project.title)
         }
     }
 }
