@@ -1,7 +1,7 @@
 {
   "package": {
-    "name": "freelance-sdk-android",
-    "repo": "freelance-sdk-android",
+    "name": "freelancer-sdk-android",
+    "repo": "freelancer-sdk-android",
     "subject": "freelancer",
     "desc": "The Freelancer sdk aims to make using the the Freelancer.com API as easy as possible.",
     "website_url": "https://developer.freelancer.com/",
