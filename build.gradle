@@ -48,9 +48,3 @@ publishing {
         }
     }
 }
-
-model {
-    tasks.generatePomFileForMavenPublication {
-        destination = file("$buildDir/libs/freelancer-sdk-android-0.1.4.pom")
-    }
-}

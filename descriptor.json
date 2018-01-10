@@ -21,7 +21,7 @@
 
   "files":
   [
-    {"includePattern": "build/libs/(.*)", "uploadPattern": "com/freelancer/freelancer-sdk-android/0.1.4/$1"},
+    {"includePattern": "build/publications/maven/(.*)", "uploadPattern": "com/freelancer/freelancer-sdk-android/0.1.4/freelancer-sdk-android-0.1.4.pom"},
     {"includePattern": "freelancer-sdk/build/outputs/aar/(.*)", "uploadPattern": "com/freelancer/freelancer-sdk-android/0.1.4/freelancer-sdk-android-0.1.4.aar"}
   ],
   "publish": true
