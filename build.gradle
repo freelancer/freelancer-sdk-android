@@ -1,6 +1,10 @@
+group 'com.freelancer'
+version '0.1.1'
+
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 apply from: 'buildsystem/variables.gradle'
 apply from: 'buildsystem/dependencies.gradle'
+apply plugin: 'maven-publish'
 
 buildscript {
     ext.kotlinVersion = "1.2.0"
@@ -23,4 +27,31 @@ allprojects {
 
 task clean(type: Delete) {
     delete rootProject.buildDir
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '3.4.1'
+}
+
+publishing {
+    publications {
+        maven(MavenPublication) {
+//            from components.java
+            pom.withXml {
+                asNode().dependencies.'*'.findAll() {
+                    it.scope.text() == 'runtime' && project.configurations.compile.allDependencies.find { dep ->
+                        dep.name == it.artifactId.text()
+                    }
+                }.each() {
+                    it.scope*.value = 'compile'
+                }
+            }
+        }
+    }
+}
+
+model {
+    tasks.generatePomFileForMavenPublication {
+        destination = file("$buildDir/libs/freelancer-sdk-0.1.1.pom")
+    }
 }

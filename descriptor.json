@@ -1,0 +1,27 @@
+{
+  "package": {
+    "name": "freelancer-sdk-android",
+    "repo": "maven",
+    "subject": "freelancer-sdk-android",
+    "desc": "The Freelancer sdk aims to make using the the Freelancer.com API as easy as possible.",
+    "website_url": "https://developer.freelancer.com/",
+    "issue_tracker_url": "https://github.com/freelancer/freelancer-sdk-android/issues",
+    "vcs_url": "https://github.com/freelancer/freelancer-sdk-android.git",
+    "licenses": ["Apache-2.0"],
+    "labels": ["kotlin", "api"],
+    "public_download_numbers": false,
+    "public_stats": false
+  },
+
+  "version": {
+    "name": "0.1.1",
+    "released": "2018-01-10",
+    "gpgSign": false
+  },
+
+  "files":
+  [
+    {"includePattern": "build/libs/(.*)", "uploadPattern": "com/freelancer/freelancer-sdk-android/0.1.1/$1"}
+  ],
+  "publish": true
+}
