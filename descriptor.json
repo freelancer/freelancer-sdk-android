@@ -21,8 +21,8 @@
 
   "files":
   [
-    {"includePattern": "build/libs/(.*)", "uploadPattern": "com/freelancer/freelancer-sdk-android/0.1.3/$1"},
-    {"includePattern": "freelancer-sdk/build/outputs/aar/(.*)", "uploadPattern": "com/freelancer/freelancer-sdk-android/0.1.3/freelancer-sdk-android-0.1.3.aar"}
+    {"includePattern": "build/libs/(.*)", "uploadPattern": "com/freelancer/freelancer-sdk-android/0.1.4/$1"},
+    {"includePattern": "freelancer-sdk/build/outputs/aar/(.*)", "uploadPattern": "com/freelancer/freelancer-sdk-android/0.1.4/freelancer-sdk-android-0.1.4.aar"}
   ],
   "publish": true
 }
