@@ -7,7 +7,7 @@
     "website_url": "https://developer.freelancer.com/",
     "issue_tracker_url": "https://github.com/freelancer/freelancer-sdk-android/issues",
     "vcs_url": "https://github.com/freelancer/freelancer-sdk-android.git",
-    "licenses": ["Apache-2.0"],
+    "licenses": ["LGPL-3.0"],
     "labels": ["kotlin", "api"],
     "public_download_numbers": false,
     "public_stats": false
