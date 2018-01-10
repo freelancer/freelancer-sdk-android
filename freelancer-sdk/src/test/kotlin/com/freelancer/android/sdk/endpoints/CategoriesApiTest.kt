@@ -4,7 +4,6 @@ import com.freelancer.android.sdk.models.JobCategory
 import com.freelancer.android.sdk.models.response.JobCategoryResponse
 import junit.framework.Assert.assertEquals
 import junit.framework.Assert.assertNull
-import junit.framework.Assert.assertTrue
 import org.junit.Before
 import org.junit.Test
 import rx.observers.TestSubscriber
@@ -36,10 +35,5 @@ internal class CategoriesApiTest : BaseApiTest() {
             assert(it.categories.contains(JobCategory(1, "Websites, IT & Software")))
             assert(it.categories.contains(JobCategory(113, "Professional Services")))
         }
-    }
-
-    @Test
-    fun fail() {
-        assertTrue(false)
     }
 }
