@@ -26,7 +26,7 @@ jdk:
   - oraclejdk8
 before_install:
   - chmod +x gradlew
-install:
+script:
   - ./gradlew test assembleRelease
 before_deploy:
   - ./gradlew generatePomFileForMavenPublication
