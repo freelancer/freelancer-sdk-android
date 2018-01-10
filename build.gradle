@@ -52,6 +52,6 @@ publishing {
 
 model {
     tasks.generatePomFileForMavenPublication {
-        destination = file("$buildDir/libs/freelancer-sdk-android-$version.pom")
+        destination = file("$buildDir/libs/freelancer-sdk-android-0.1.3.pom")
     }
 }
