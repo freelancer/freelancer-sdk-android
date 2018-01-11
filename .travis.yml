@@ -37,4 +37,4 @@ deploy:
   key: $BINTRAY_API_KEY
   dry-run: false
   on:
-    branch: travis-ci
+    branch: master
