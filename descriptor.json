@@ -21,7 +21,7 @@
 
   "files":
   [
-    {"includePattern": "freelancer-sdk-android/freelancer-sdk/build/publications/Production/pom-default.xml",
+    {"includePattern": "freelancer-sdk/build/publications/Production/pom-default.xml",
       "uploadPattern": "com/freelancer/freelancer-sdk-android/0.1.5/freelancer-sdk-android-0.1.5.pom"},
 
     {"includePattern": "freelancer-sdk/build/outputs/aar/(.*)",

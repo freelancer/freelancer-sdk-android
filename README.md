@@ -23,12 +23,16 @@ allprojects {
     repositories {
         //ensure you have this line in you repositories for all projects
         jcenter()
+
+        maven {
+            url  "https://dl.bintray.com/freelancer/freelancer-sdk-android"
+        }
     }
 }
 
 //In the project gradle
 dependencies {
-    compile('com.freelancer:freelancer-sdk:0.1.0@aar') {
+    compile('com.freelancer:freelancer-sdk:0.1.5@aar') {
         transitive = true
     }
 }
