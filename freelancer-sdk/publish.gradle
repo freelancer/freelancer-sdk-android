@@ -9,7 +9,7 @@ publishing {
         Production(MavenPublication) {
             artifact("$buildDir/outputs/aar/freelancer-sdk-release.aar")
             groupId
-            artifactId 'example'
+            artifactId 'freelancer-sdk-android'
             version this.version
 
             pom.withXml {
