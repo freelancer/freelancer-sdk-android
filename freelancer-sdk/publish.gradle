@@ -8,7 +8,7 @@ publishing {
     publications {
         Production(MavenPublication) {
             artifact("$buildDir/outputs/aar/freelancer-sdk-release.aar")
-            groupId
+            groupId 'com.freelancer'
             artifactId 'freelancer-sdk-android'
             version this.version
 
