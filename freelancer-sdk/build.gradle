@@ -56,3 +56,5 @@ dependencies {
 
     implementation dependencies.okhttpLogging
 }
+
+apply from: 'publish.gradle'

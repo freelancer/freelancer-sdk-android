@@ -14,15 +14,18 @@
   },
 
   "version": {
-    "name": "0.1.3",
-    "released": "2018-01-10",
+    "name": "0.1.5",
+    "released": "2018-01-11",
     "gpgSign": false
   },
 
   "files":
   [
-    {"includePattern": "build/publications/maven/(.*)", "uploadPattern": "com/freelancer/freelancer-sdk-android/0.1.4/freelancer-sdk-android-0.1.4.pom"},
-    {"includePattern": "freelancer-sdk/build/outputs/aar/(.*)", "uploadPattern": "com/freelancer/freelancer-sdk-android/0.1.4/freelancer-sdk-android-0.1.4.aar"}
+    {"includePattern": "freelancer-sdk-android/freelancer-sdk/build/publications/Production/pom-default.xml",
+      "uploadPattern": "com/freelancer/freelancer-sdk-android/0.1.5/freelancer-sdk-android-0.1.5.pom"},
+
+    {"includePattern": "freelancer-sdk/build/outputs/aar/(.*)",
+      "uploadPattern": "com/freelancer/freelancer-sdk-android/0.1.5/freelancer-sdk-android-0.1.5.aar"}
   ],
   "publish": true
 }
