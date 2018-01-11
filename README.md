@@ -32,9 +32,7 @@ allprojects {
 
 //In the project gradle
 dependencies {
-    compile('com.freelancer:freelancer-sdk-android:0.1.5:@aar') {
-        transitive = true
-    }
+    compile 'com.freelancer:android-sdk:0.1.0'
 }
 
 ```
