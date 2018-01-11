@@ -25,10 +25,6 @@ allprojects {
     repositories {
         //ensure you have this line in you repositories for all projects
         jcenter()
-
-        maven {
-            url  "https://dl.bintray.com/freelancer/freelancer-sdk-android"
-        }
     }
 }
 
