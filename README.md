@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/freelancer/freelancer-sdk-android.svg?branch=master)](https://travis-ci.org/freelancer/freelancer-sdk-android)
+
 # Freelancer Android Sdk
 
 The Freelancer sdk aims to make using the the Freelancer.com API as easy as possible.
