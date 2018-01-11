@@ -67,10 +67,10 @@ tasks.withType(Javadoc) {
 ext {
     publishedGroupId = 'com.freelancer'
     publishedPackaging = 'aar'
-    publishedArtifact = 'android-sdk'
+    publishedArtifact = 'freelancer-sdk'
 
     libraryVersionName = sdkVersionName
-    libraryName = 'android-sdk'
+    libraryName = 'freelancer-sdk'
     libraryDescription = ''
     libraryUrl = 'https://github.com/freelancer/freelancer-sdk-android'
     libraryIssuesUrl = 'https://github.com/freelancer/freelancer-sdk-android/issues'
@@ -80,17 +80,16 @@ ext {
 
     licenseName = 'GNU LESSER GENERAL PUBLIC LICENSE'
     licenseUrl = 'http://www.opensource.org/licenses/lgpl-3.0.html'
-    allLicenses = ["LGPL-3.0 "]
+    allLicenses = ["LGPL-3.0"]
 
     developerId = 'freelancer'
     developerName = 'Freelancer.com'
     developerEmail = 'lomasarran1993@googlemail.com'
 
-    bintrayRepo = 'freelance-sdk-android'
-    bintrayName = 'android-sdk'
+    bintrayRepo = 'freelancer-sdk-android'
+    bintrayName = 'freelancer-sdk-android'
     bintrayOrg = 'freelancer'
 }
 
 apply from: 'bintray/install.gradle'
 apply from: 'bintray/bintray.gradle'
-apply from: 'publish.gradle'
