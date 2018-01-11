@@ -5,7 +5,7 @@ apply plugin: 'kotlin-android-extensions'
 def globalConf = rootProject.ext
 
 def sdkVersionCode = 000100
-def sdkVersionName = "0.1.0"
+def sdkVersionName = "0.1.1"
 
 android {
     compileSdkVersion 26
@@ -70,7 +70,7 @@ ext {
     publishedArtifact = 'android-sdk'
 
     libraryVersionName = sdkVersionName
-    libraryName = 'freelancer-sdk'
+    libraryName = 'android-sdk'
     libraryDescription = ''
     libraryUrl = 'https://github.com/freelancer/freelancer-sdk-android'
     libraryIssuesUrl = 'https://github.com/freelancer/freelancer-sdk-android/issues'
