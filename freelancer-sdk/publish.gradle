@@ -24,7 +24,6 @@ publishing {
                         dependencyNode.appendNode('artifactId', it.name)
                         dependencyNode.appendNode('version', it.version)
 
-                        // Test
                         dependencyNode.appendNode('scope', 'compile')
                     }
                 }
