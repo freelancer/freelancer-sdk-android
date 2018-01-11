@@ -29,7 +29,7 @@ before_install:
 script:
   - ./gradlew test assembleRelease
 before_deploy:
-  - ./gradlew generatePomFileForMavenPublication
+  - ./gradlew generatePomFileForProductionPublication
 deploy:
   provider: bintray
   file: "descriptor.json"
