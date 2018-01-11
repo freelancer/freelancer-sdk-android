@@ -1,1 +1,1 @@
-include ':sample', ':freelancer-sdk'
+include ':sample', ':android-sdk'

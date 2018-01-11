@@ -4,14 +4,17 @@ apply plugin: 'kotlin-android-extensions'
 
 def globalConf = rootProject.ext
 
+def sdkVersionCode = 000100
+def sdkVersionName = "0.1.0"
+
 android {
     compileSdkVersion 26
 
     defaultConfig {
         minSdkVersion 19
         targetSdkVersion 26
-        versionCode 1
-        versionName "1.0"
+        versionCode sdkVersionCode
+        versionName sdkVersionName
 
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
@@ -56,3 +59,37 @@ dependencies {
 
     implementation dependencies.okhttpLogging
 }
+
+tasks.withType(Javadoc) {
+    enabled = false
+}
+
+ext {
+    publishedGroupId = 'com.freelancer'
+    publishedPackaging = 'aar'
+    publishedArtifact = 'android-sdk'
+
+    libraryVersionName = sdkVersionName
+    libraryName = 'android-sdk'
+    libraryDescription = ''
+    libraryUrl = 'https://github.com/freelancer/freelancer-sdk-android'
+    libraryIssuesUrl = 'https://github.com/freelancer/freelancer-sdk-android/issues'
+    libraryVcsUrl = 'https://github.com/freelancer/freelancer-sdk-android.git'
+    toPublishLibrary = true
+    toPublicDownloadNumbers = true
+
+    licenseName = 'GNU LESSER GENERAL PUBLIC LICENSE'
+    licenseUrl = 'http://www.opensource.org/licenses/lgpl-3.0.html'
+    allLicenses = ["LGPL-3.0"]
+
+    developerId = 'freelancer'
+    developerName = 'Freelancer.com'
+    developerEmail = 'lomasarran1993@googlemail.com'
+
+    bintrayRepo = 'freelancer-sdk-android'
+    bintrayName = 'freelancer-sdk-android'
+    bintrayOrg = 'freelancer'
+}
+
+apply from: 'bintray/install.gradle'
+apply from: 'bintray/bintray.gradle'
