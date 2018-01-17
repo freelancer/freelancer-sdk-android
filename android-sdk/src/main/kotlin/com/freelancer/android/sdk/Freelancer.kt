@@ -67,7 +67,7 @@ class Freelancer(private val authToken: String,
         return getRetrofitApi(BuildConfig.API_PREFIX_PROJECTS, CurrenciesApi::class.java)
     }
 
-   fun createBudgetsApi(): BudgetsApi {
+    fun createBudgetsApi(): BudgetsApi {
         return getRetrofitApi(BuildConfig.API_PREFIX_PROJECTS, BudgetsApi::class.java)
     }
 

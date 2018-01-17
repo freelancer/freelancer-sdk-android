@@ -12,9 +12,7 @@ import com.freelancer.android.sdk.oauth.OAuthActivity.Companion.KEY_ERROR
 import com.freelancer.android.sdk.oauth.OAuthActivity.Companion.KEY_TOKEN
 import com.freelancer.android.sdk.oauth.OAuthException
 import com.freelancer.android.sdk.oauth.OAuthTokenResponse
-import kotlinx.android.synthetic.main.activity_sample.getUserButton
-import kotlinx.android.synthetic.main.activity_sample.oAuthButton
-import kotlinx.android.synthetic.main.activity_sample.textBox
+import kotlinx.android.synthetic.main.activity_sample.*
 import rx.android.schedulers.AndroidSchedulers
 import rx.schedulers.Schedulers
 
