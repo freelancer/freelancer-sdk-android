@@ -21,22 +21,22 @@ internal class BudgetsApiTest : BaseApiTest() {
         server.enqueue(createMockResponse(readFromFile("get_budgets.json")))
         val subscriber = TestObserver<BudgetsResponse>()
 
-        // Act
-        budgetsApi.getBudgets().subscribe(subscriber)
+        // Setup test observer
+        val testObserver = budgetsApi.getBudgets().test()
 
         // Assert
-        subscriber.assertComplete()
-        subscriber.awaitTerminalEvent()
-        subscriber.assertComplete()
-        subscriber.assertNoErrors()
-        subscriber.assertValueCount(1)
-        subscriber.values().first().let {
-            Assert.assertNotNull(it.budgets)
-            Assert.assertNotNull(it.currencies)
-            Assert.assertEquals(380, it.budgets.size)
-            it.budgets.forEach { budget ->
-                Assert.assertNotNull(budget.name)
-            }
-        }
+        testObserver.awaitTerminalEvent()
+        testObserver
+                .assertComplete()
+                .assertNoErrors()
+                .assertValueCount(1)
+                .values().first().let {
+                    Assert.assertNotNull(it.budgets)
+                    Assert.assertNotNull(it.currencies)
+                    Assert.assertEquals(380, it.budgets.size)
+                    it.budgets.forEach { budget ->
+                        Assert.assertNotNull(budget.name)
+                    }
+                }
     }
 }

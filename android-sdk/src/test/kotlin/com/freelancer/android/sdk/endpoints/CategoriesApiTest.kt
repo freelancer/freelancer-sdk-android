@@ -21,22 +21,21 @@ internal class CategoriesApiTest : BaseApiTest() {
     fun getCategories() {
         // Arrange
         server.enqueue(createMockResponse(readFromFile("get_categories.json")))
-        val subscriber = TestObserver<JobCategoryResponse>()
 
-        // Act
-        categoriesApi.getCategories().subscribe(subscriber)
+        // Setup test observer
+        val testObserver = categoriesApi.getCategories().test()
 
         // Assert
-        subscriber.assertComplete()
-        subscriber.awaitTerminalEvent()
-        subscriber.assertComplete()
-        subscriber.assertNoErrors()
-        subscriber.assertValueCount(1)
-        subscriber.values().first().let {
-            assertNull(it.jobs)
-            assertEquals(26, it.categories.size)
-            assert(it.categories.contains(JobCategory(1, "Websites, IT & Software")))
-            assert(it.categories.contains(JobCategory(113, "Professional Services")))
-        }
+        testObserver.awaitTerminalEvent()
+        testObserver
+                .assertComplete()
+                .assertNoErrors()
+                .assertValueCount(1)
+                .values().first().let {
+                    assertNull(it.jobs)
+                    assertEquals(26, it.categories.size)
+                    assert(it.categories.contains(JobCategory(1, "Websites, IT & Software")))
+                    assert(it.categories.contains(JobCategory(113, "Professional Services")))
+                }
     }
 }
