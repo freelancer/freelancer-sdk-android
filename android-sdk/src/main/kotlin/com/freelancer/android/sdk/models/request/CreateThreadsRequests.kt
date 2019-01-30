@@ -45,8 +45,8 @@ data class TypeRequest(private val type: ThreadInfo.ThreadType)
 data class ClientMessageIdRequest(private val clientId: String)
     : BaseCreateThreadRequestBody<String>(clientId, StringMediaType)
 
-open class BaseCreateThreadRequestBody<out T>(private val item: T, private val mediaType: MediaType) : RequestBody() {
-    override fun contentType(): MediaType {
+open class BaseCreateThreadRequestBody<out T>(private val item: T, private val mediaType: MediaType?) : RequestBody() {
+    override fun contentType(): MediaType? {
         return mediaType
     }
 

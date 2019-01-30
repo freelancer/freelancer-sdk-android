@@ -9,7 +9,7 @@ import okhttp3.mockwebserver.MockWebServer
 import org.junit.After
 import org.junit.Before
 import retrofit2.Retrofit
-import retrofit2.adapter.rxjava.RxJavaCallAdapterFactory
+import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
 import retrofit2.converter.gson.GsonConverterFactory
 import java.io.BufferedReader
 import java.io.ByteArrayOutputStream
@@ -41,7 +41,7 @@ internal fun <T> Class<T>.getRetrofitApi(server: MockWebServer): T {
             .baseUrl(server.url("/"))
             .client(clientBuilder.build())
             .addConverterFactory(GsonConverterFactory.create(GSON))
-            .addCallAdapterFactory(RxJavaCallAdapterFactory.create())
+            .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
             .build()
     return apiAdapter.create(this)
 }
