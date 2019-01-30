@@ -2,13 +2,13 @@
 
 # Freelancer Android Sdk
 
-The Freelancer sdk aims to make using the the Freelancer.com API as easy as possible.
+The Freelancer sdk aims to make using the Freelancer.com API as easy as possible.
 
 
 ## Freelancer sdk features
 
 * Easy access to accounts.freelancer.com for OAuth to the Freelancer.com API
-* Containts models for all json response
+* Contains models for all json response
 * Access the Freelancer.com API
 
 ## Getting Started
