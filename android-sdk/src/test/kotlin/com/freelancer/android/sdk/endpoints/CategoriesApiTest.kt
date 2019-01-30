@@ -2,11 +2,11 @@ package com.freelancer.android.sdk.endpoints
 
 import com.freelancer.android.sdk.models.JobCategory
 import com.freelancer.android.sdk.models.response.JobCategoryResponse
+import io.reactivex.observers.TestObserver
 import junit.framework.Assert.assertEquals
 import junit.framework.Assert.assertNull
 import org.junit.Before
 import org.junit.Test
-import rx.observers.TestSubscriber
 
 internal class CategoriesApiTest : BaseApiTest() {
 
@@ -19,17 +19,20 @@ internal class CategoriesApiTest : BaseApiTest() {
 
     @Test
     fun getCategories() {
+        // Arrange
         server.enqueue(createMockResponse(readFromFile("get_categories.json")))
+        val subscriber = TestObserver<JobCategoryResponse>()
 
-        val subscriber = TestSubscriber<JobCategoryResponse>()
-
+        // Act
         categoriesApi.getCategories().subscribe(subscriber)
-        subscriber.assertCompleted()
+
+        // Assert
+        subscriber.assertComplete()
         subscriber.awaitTerminalEvent()
-        subscriber.assertCompleted()
+        subscriber.assertComplete()
         subscriber.assertNoErrors()
         subscriber.assertValueCount(1)
-        subscriber.onNextEvents.first().let {
+        subscriber.values().first().let {
             assertNull(it.jobs)
             assertEquals(26, it.categories.size)
             assert(it.categories.contains(JobCategory(1, "Websites, IT & Software")))
