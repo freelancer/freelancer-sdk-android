@@ -1,7 +1,5 @@
 package com.freelancer.android.sdk.endpoints
 
-import com.freelancer.android.sdk.models.response.BudgetsResponse
-import io.reactivex.observers.TestObserver
 import junit.framework.Assert
 import org.junit.Before
 import org.junit.Test
@@ -19,7 +17,6 @@ internal class BudgetsApiTest : BaseApiTest() {
     fun getCategories() {
         // Arrange
         server.enqueue(createMockResponse(readFromFile("get_budgets.json")))
-        val subscriber = TestObserver<BudgetsResponse>()
 
         // Setup test observer
         val testObserver = budgetsApi.getBudgets().test()

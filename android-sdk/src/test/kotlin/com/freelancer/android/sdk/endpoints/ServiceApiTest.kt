@@ -1,9 +1,6 @@
 package com.freelancer.android.sdk.endpoints
 
 import com.freelancer.android.sdk.models.Service
-import com.freelancer.android.sdk.models.response.ServiceListResponse
-import com.freelancer.android.sdk.models.response.ServiceOrderResponse
-import io.reactivex.observers.TestObserver
 import junit.framework.Assert.assertEquals
 import junit.framework.Assert.assertTrue
 import org.junit.Before
@@ -57,7 +54,6 @@ internal class ServiceApiTest : BaseApiTest() {
                     assertEquals("Create a Caricature", it.services[0].title)
                 }
     }
-
 
     @Test
     fun orderService() {

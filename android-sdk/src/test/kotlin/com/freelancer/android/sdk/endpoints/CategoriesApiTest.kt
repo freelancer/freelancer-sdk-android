@@ -1,8 +1,6 @@
 package com.freelancer.android.sdk.endpoints
 
 import com.freelancer.android.sdk.models.JobCategory
-import com.freelancer.android.sdk.models.response.JobCategoryResponse
-import io.reactivex.observers.TestObserver
 import junit.framework.Assert.assertEquals
 import junit.framework.Assert.assertNull
 import org.junit.Before
