@@ -1,9 +1,9 @@
 package com.freelancer.android.sdk.endpoints
 
 import com.freelancer.android.sdk.models.response.ThreadsResponse
+import io.reactivex.Single
 import retrofit2.http.GET
 import retrofit2.http.Query
-import rx.Observable
 
 interface MessagesApi {
 
@@ -22,7 +22,7 @@ interface MessagesApi {
             @Query("count") count: Boolean,
             @Query("user_details") userDetails: Boolean,
             @Query("thread_details") threadDetails: Boolean
-    ): Observable<ThreadsResponse>
+    ): Single<ThreadsResponse>
 
     /**
      * TODO

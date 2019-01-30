@@ -3,13 +3,13 @@ package com.freelancer.android.sdk.endpoints
 import com.freelancer.android.sdk.models.Service
 import com.freelancer.android.sdk.models.response.ServiceListResponse
 import com.freelancer.android.sdk.models.response.ServiceOrderResponse
+import io.reactivex.Single
 import retrofit2.http.Field
 import retrofit2.http.FormUrlEncoded
 import retrofit2.http.GET
 import retrofit2.http.PUT
 import retrofit2.http.Path
 import retrofit2.http.Query
-import rx.Observable
 
 interface ServicesApi {
 
@@ -19,7 +19,7 @@ interface ServicesApi {
             @Path("service_type") serviceType: Service.Type,
             @Path("service_id") serviceId: Long,
             @Field("extras") extras: List<Long>? = null
-    ): Observable<ServiceOrderResponse>
+    ): Single<ServiceOrderResponse>
 
     @GET("services/")
     fun listServices(
@@ -59,7 +59,7 @@ interface ServicesApi {
             @Query("limit") limit: Long? = null,
             @Query("offset") offset: Long? = null,
             @Query("compact") compact: Boolean? = null
-    ): Observable<ServiceListResponse>
+    ): Single<ServiceListResponse>
 
     @GET("services/active/")
     fun listActiveServices(
@@ -74,5 +74,5 @@ interface ServicesApi {
             @Query("full_description") fullDescription: Boolean? = null,
             @Query("offset") offset: Boolean? = null,
             @Query("compact") compact: Boolean? = null
-    ): Observable<ServiceListResponse>
+    ): Single<ServiceListResponse>
 }

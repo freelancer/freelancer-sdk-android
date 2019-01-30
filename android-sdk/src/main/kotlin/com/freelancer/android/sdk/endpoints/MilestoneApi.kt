@@ -4,13 +4,13 @@ import com.freelancer.android.sdk.models.Milestone
 import com.freelancer.android.sdk.models.request.CreateMilestoneRequest
 import com.freelancer.android.sdk.models.response.ApiResponse
 import com.freelancer.android.sdk.models.response.MilestoneResponse
+import io.reactivex.Single
 import retrofit2.http.Body
 import retrofit2.http.GET
 import retrofit2.http.POST
 import retrofit2.http.PUT
 import retrofit2.http.Path
 import retrofit2.http.Query
-import rx.Observable
 
 interface MilestoneApi {
 
@@ -44,15 +44,15 @@ interface MilestoneApi {
             @Query("user_past_cover_images") userPastCoverImages: Boolean = true,
             @Query("user_responsiveness") userResponsiveness: Boolean = true,
             @Query("corporate_users") corporateUsers: Boolean = true
-    ): Observable<MilestoneResponse>
+    ): Single<MilestoneResponse>
 
     @POST("milestones")
-    fun createMilestone(@Body createMilestoneRequest: CreateMilestoneRequest): Observable<Milestone>
+    fun createMilestone(@Body createMilestoneRequest: CreateMilestoneRequest): Single<Milestone>
 
     @PUT("milestones/{milestone_id}/")
     fun performMilestoneAction(
             @Path("milestone_id") milestoneRequestId: Long,
             @Query("action") action: Milestone.MilestoneAction,
             @Query("amount") amount: Float
-    ): Observable<ApiResponse>
+    ): Single<ApiResponse>
 }
