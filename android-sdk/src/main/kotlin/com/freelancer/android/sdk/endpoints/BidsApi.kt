@@ -5,6 +5,7 @@ import com.freelancer.android.sdk.models.request.BidRequest
 import com.freelancer.android.sdk.models.request.UpdateBidRequest
 import com.freelancer.android.sdk.models.response.ApiResponse
 import com.freelancer.android.sdk.models.response.BidsResponse
+import io.reactivex.Single
 import retrofit2.http.Body
 import retrofit2.http.Field
 import retrofit2.http.FormUrlEncoded
@@ -13,12 +14,12 @@ import retrofit2.http.POST
 import retrofit2.http.PUT
 import retrofit2.http.Path
 import retrofit2.http.Query
-import rx.Observable
 
 interface BidsApi {
 
     @GET("/bids/")
-    fun getBids(@Query("bids[]") bids: List<Long>,
+    fun getBids(
+            @Query("bids[]") bids: List<Long>,
             @Query("projects[]") projects: List<Long>,
             @Query("bidders[]") bidders: List<Long>,
             @Query("project_owners[]") owners: List<Long>,
@@ -56,31 +57,31 @@ interface BidsApi {
             @Query("limit") limit: Long,
             @Query("offset") offset: Long,
             @Query("compact") compact: Boolean
-    ): Observable<List<Bid>>
+    ): Single<List<Bid>>
 
     @GET("bids")
     fun getBidsByBidsId(@Query("bids[]") bidIds: List<Long>,
-            @Query("award_status_possibilities") awardStatusPossibilities: Boolean = true,
-            @Query("buyer_project_fee") buyerProjectFee: Boolean = true,
-            @Query("reputation") reputation: Boolean = true): Observable<BidsResponse>
+                        @Query("award_status_possibilities") awardStatusPossibilities: Boolean = true,
+                        @Query("buyer_project_fee") buyerProjectFee: Boolean = true,
+                        @Query("reputation") reputation: Boolean = true): Single<BidsResponse>
 
     @GET("bids")
     fun getBidsByProjectsId(@Query("projects[]") projectIds: List<Long>,
-            @Query("award_status_possibilities") awardStatusPossibilities: Boolean = true,
-            @Query("buyer_project_fee") buyerProjectFee: Boolean = true,
-            @Query("reputation") reputation: Boolean = true): Observable<List<Bid>>
+                            @Query("award_status_possibilities") awardStatusPossibilities: Boolean = true,
+                            @Query("buyer_project_fee") buyerProjectFee: Boolean = true,
+                            @Query("reputation") reputation: Boolean = true): Single<List<Bid>>
 
     @GET("bids")
     fun getBidsByBidderId(@Query("bidders[]") bidderIds: List<Long>,
-            @Query("award_status_possibilities") awardStatusPossibilities: Boolean = true,
-            @Query("buyer_project_fee") buyerProjectFee: Boolean = true,
-            @Query("reputation") reputation: Boolean = true): Observable<List<Bid>>
+                          @Query("award_status_possibilities") awardStatusPossibilities: Boolean = true,
+                          @Query("buyer_project_fee") buyerProjectFee: Boolean = true,
+                          @Query("reputation") reputation: Boolean = true): Single<List<Bid>>
 
     @GET("bids")
     fun getBidsByProjectOwnerId(@Query("project_owners[]") projectOwnerIds: List<Long>,
-            @Query("award_status_possibilities") award_status_possibilities: Boolean = true,
-            @Query("buyer_project_fee") buyer_project_fee: Boolean = true,
-            @Query("reputation") reputation: Boolean = true): Observable<List<Bid>>
+                                @Query("award_status_possibilities") award_status_possibilities: Boolean = true,
+                                @Query("buyer_project_fee") buyer_project_fee: Boolean = true,
+                                @Query("reputation") reputation: Boolean = true): Single<List<Bid>>
 
     @GET("bids/{bid_id}")
     fun getBidById(
@@ -113,15 +114,15 @@ interface BidsApi {
             @Query("limit") limit: Long,
             @Query("offset") offset: Long,
             @Query("compact") compact: Boolean
-    ): Observable<Bid>
+    ): Single<Bid>
 
     @POST("bids")
-    fun createBid(@Body bidRequest: BidRequest): Observable<Bid>
+    fun createBid(@Body bidRequest: BidRequest): Single<Bid>
 
     @PUT("bids/{bid_id}/")
-    fun updateBid(@Path("bid_id") bidId: Long, @Body updateBidRequest: UpdateBidRequest): Observable<Bid>
+    fun updateBid(@Path("bid_id") bidId: Long, @Body updateBidRequest: UpdateBidRequest): Single<Bid>
 
     @PUT("bids/{bid_id}/")
     @FormUrlEncoded
-    fun performBidAction(@Path("bid_id") bidId: Long, @Field("action") bidAction: String): Observable<ApiResponse>
+    fun performBidAction(@Path("bid_id") bidId: Long, @Field("action") bidAction: String): Single<ApiResponse>
 }

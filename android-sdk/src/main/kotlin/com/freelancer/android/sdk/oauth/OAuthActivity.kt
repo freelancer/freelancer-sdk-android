@@ -16,14 +16,14 @@ import android.webkit.WebView
 import android.webkit.WebViewClient
 import com.freelancer.android.flapi.BuildConfig
 import com.freelancer.android.flapi.R
+import io.reactivex.android.schedulers.AndroidSchedulers
+import io.reactivex.disposables.Disposable
+import io.reactivex.schedulers.Schedulers
 import kotlinx.android.synthetic.main.activity_oauth.*
-import rx.Subscription
-import rx.android.schedulers.AndroidSchedulers
-import rx.schedulers.Schedulers
 
 class OAuthActivity : AppCompatActivity() {
 
-    private var subscribe: Subscription? = null
+    private var subscription: Disposable? = null
 
     companion object {
 
@@ -42,7 +42,8 @@ class OAuthActivity : AppCompatActivity() {
         private val KEY_REQUEST_CODE = "KEY_REQUEST_CODE"
         private val KEY_IS_DEBUG = "KEY_IS_DEBUG"
 
-        fun startActivityForResult(activity: Activity,
+        fun startActivityForResult(
+                activity: Activity,
                 requestCode: Int,
                 clientId: String,
                 secret: String,
@@ -177,7 +178,7 @@ class OAuthActivity : AppCompatActivity() {
             OAuthService.isSandbox = isSandbox
         }
 
-        subscribe = OAuthService.getInstance().grant(
+        subscription = OAuthService.getInstance().grant(
                 grantType = "authorization_code",
                 code = authCode,
                 clientId = clientId,
@@ -194,7 +195,8 @@ class OAuthActivity : AppCompatActivity() {
                     finish()
                 }, { error ->
                     val intent = Intent()
-                    intent.putExtra(KEY_ERROR, OAuthException(error.toString(), error.message ?: ""))
+                    intent.putExtra(KEY_ERROR, OAuthException(error.toString(), error.message
+                            ?: ""))
                     setResult(RESULT_ERROR, intent)
                     finish()
                 })
@@ -202,10 +204,8 @@ class OAuthActivity : AppCompatActivity() {
 
     override fun onStop() {
         super.onStop()
-        subscribe?.let {
-            if (!it.isUnsubscribed) {
-                it.unsubscribe()
-            }
+        subscription?.let {
+            if (!it.isDisposed) it.dispose()
         }
     }
 

@@ -12,11 +12,11 @@ import com.freelancer.android.sdk.oauth.OAuthActivity.Companion.KEY_ERROR
 import com.freelancer.android.sdk.oauth.OAuthActivity.Companion.KEY_TOKEN
 import com.freelancer.android.sdk.oauth.OAuthException
 import com.freelancer.android.sdk.oauth.OAuthTokenResponse
+import io.reactivex.android.schedulers.AndroidSchedulers
+import io.reactivex.schedulers.Schedulers
 import kotlinx.android.synthetic.main.activity_sample.getUserButton
 import kotlinx.android.synthetic.main.activity_sample.oAuthButton
 import kotlinx.android.synthetic.main.activity_sample.textBox
-import rx.android.schedulers.AndroidSchedulers
-import rx.schedulers.Schedulers
 
 class SampleActivity : AppCompatActivity() {
 

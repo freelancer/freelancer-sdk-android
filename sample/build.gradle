@@ -20,6 +20,9 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+    packagingOptions {
+        exclude 'META-INF/rxkotlin.properties'
+    }
 }
 
 dependencies {
@@ -37,6 +40,5 @@ dependencies {
     implementation dependencies.rxJava
     implementation dependencies.rxKotlin
 
-    //implementation project(':freelancer-sdk')
-    compile 'com.freelancer:freelancer-sdk:0.1.0'
+    implementation project(':android-sdk')
 }

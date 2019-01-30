@@ -10,32 +10,32 @@ import okhttp3.ResponseBody
 internal class ApiResponseInterceptor : Interceptor {
     private val JSON = MediaType.parse("application/json; charset=utf-8")
 
-    override fun intercept(chain: Interceptor.Chain?): Response? {
-        chain ?: return null
-
+    override fun intercept(chain: Interceptor.Chain): Response {
         val request = chain.request()
         val response = chain.proceed(request)
+        val body = response.body()
         val contentType = response.headers().get("content-type")
-        if ("application/json" == contentType) {
-            val body = response.body()
-            var bodyString = body.string()
-            val apiResponse = GSON.fromJson(bodyString, ApiResponse::class.java)
-            body?.close()
+        body?.let {
+            if ("application/json" == contentType) {
+                var bodyString = it.string()
+                val apiResponse = GSON.fromJson(bodyString, ApiResponse::class.java)
+                it.close()
 
-            val newResponse = response.newBuilder()
-            apiResponse?.result?.let {
-                bodyString = apiResponse.result.toString()
-            }
+                val newResponse = response.newBuilder()
+                apiResponse?.result?.let { bodyString = apiResponse.result.toString() }
 
-            return newResponse.body(ResponseBody.create(JSON, bodyString))
-                    .build()
-        } else if (contentType.contains("text/html")) {
-            val body = response.body()
-            val bodyString = body.string()
-            body?.close()
-            if (bodyString.contains("verified") && bodyString.contains("data")) {
-                return response.newBuilder().body(ResponseBody.create(JSON, bodyString))
+                return newResponse
+                        .body(ResponseBody.create(JSON, bodyString))
                         .build()
+            } else if (contentType!!.contains("text/html")) {
+                val bodyString = body.string()
+                it.close()
+                if (bodyString.contains("verified") && bodyString.contains("data")) {
+                    return response
+                            .newBuilder()
+                            .body(ResponseBody.create(JSON, bodyString))
+                            .build()
+                }
             }
         }
         return response

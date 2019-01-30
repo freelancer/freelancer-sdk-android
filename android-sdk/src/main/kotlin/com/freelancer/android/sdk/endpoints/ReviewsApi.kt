@@ -6,11 +6,11 @@ import com.freelancer.android.sdk.models.ReviewContext
 import com.freelancer.android.sdk.models.request.PostReviewRequest
 import com.freelancer.android.sdk.models.response.ApiResponse
 import com.freelancer.android.sdk.models.response.ReviewResponse
+import io.reactivex.Single
 import retrofit2.http.Body
 import retrofit2.http.GET
 import retrofit2.http.POST
 import retrofit2.http.Query
-import rx.Observable
 
 interface ReviewsApi {
 
@@ -63,10 +63,10 @@ interface ReviewsApi {
             @Query("limit") limit: Long,
             @Query("offset") offset: Long,
             @Query("compact") compact: Boolean
-    ): Observable<ReviewResponse>
+    ): Single<ReviewResponse>
 
     @POST("reviews")
-    fun postProjectReview(@Body postReviewRequest: PostReviewRequest): Observable<ApiResponse>
+    fun postProjectReview(@Body postReviewRequest: PostReviewRequest): Single<ApiResponse>
 
     /**
      * TODO
