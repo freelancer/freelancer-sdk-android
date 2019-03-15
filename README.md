@@ -1,11 +1,11 @@
 [![Build Status](https://travis-ci.org/freelancer/freelancer-sdk-android.svg?branch=master)](https://travis-ci.org/freelancer/freelancer-sdk-android)
 
-# Freelancer Android Sdk
+# Freelancer Android SDK
 
 The Freelancer sdk aims to make using the Freelancer.com API as easy as possible.
 
 
-## Freelancer sdk features
+## Features
 
 * Easy access to accounts.freelancer.com for OAuth to the Freelancer.com API
 * Contains models for all json response
@@ -32,24 +32,22 @@ allprojects {
 dependencies {
     compile 'com.freelancer:android-sdk:0.1.0'
 }
-
 ```
 
-Please check the [SampleActivity](https://github.com/freelancer/freelancer-sdk-android/blob/master/sample/src/main/java/com/freelancer/android/flsdkandroid/SampleActivity.kt) for usage examples
-
+Please check the [SampleActivity](https://github.com/freelancer/freelancer-sdk-android/blob/master/sample/src/main/java/com/freelancer/android/flsdkandroid/SampleActivity.kt) for usage examples.
 
 ## Contributing
 
-The master branch of this repository is used for developing, releases will be cut from the master branch, any fixes for these release will be created on master and cherry picked onto the release branches. To contribute please create a fork from master and submit a pull request.
-
+To contribute please create a fork from master and submit a pull request.
 
 ## Contact
 
-For usage questions please check through the issues and check the [sample app](https://github.com/freelancer/freelancer-sdk-android/blob/master/sample/src/main/java/com/freelancer/android/flsdkandroid/SampleActivity.kt).
-If you are still having problems please post an issue [here](https://github.com/freelancer/freelancer-sdk-android/issues).
+For usage questions please check through the [issues](https://github.com/freelancer/freelancer-sdk-android/issues) and check the [sample app](https://github.com/freelancer/freelancer-sdk-android/blob/master/sample/src/main/java/com/freelancer/android/flsdkandroid/SampleActivity.kt).
 
-Please report any bugs as [issues](https://github.com/freelancer/freelancer-sdk-android/issues).
+## Report Issues
+
+Please report any issue/s encountered when using the SDK [here](https://github.com/freelancer/freelancer-sdk-android/issues/new/choose).
 
 ## License
 
-Licensed under the [GNU Lesser General Public License v3.0](https://github.com/freelancer/freelancer-sdk-android/blob/master/LICENSE)
+Licensed under the [GNU Lesser General Public License v3.0](https://github.com/freelancer/freelancer-sdk-android/blob/master/LICENSE).
